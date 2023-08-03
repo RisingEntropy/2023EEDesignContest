@@ -25,7 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log DecimatorBuffer.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source DecimatorBuffer.tcl -notrace" );
+         "-log SignalSplitter.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source SignalSplitter.tcl -notrace" );
 
 
 

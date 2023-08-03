@@ -67,22 +67,11 @@ module DecimatorBuffer(
         .busy(spi_busy),
         .error(spi_error)
     );
-    ila_0 ila(
-        .clk(clk),
-        .probe0(adc_in),
-        .probe1(fifo_dout),
-        .probe2(spi_clk),
-        .probe3(spi_mosi),
-        .probe4(busy),
-        .probe5(enable),
-        .probe6(internal_enable),
-        .probe7(decimator_counter),
-        .probe8(current_state)
-    );
+
     always@(posedge clk)begin
         internal_enable = {internal_enable[0],enable};
     end
-    always@(posedge clk or negedge rstn)begin
+    always@(posedge clk)begin
         if(rstn==0)begin
             busy <= 0;
         end else if(internal_enable==2'b01&&current_state==STATE_IDLE) begin

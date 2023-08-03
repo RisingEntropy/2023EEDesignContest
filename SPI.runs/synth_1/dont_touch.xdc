@@ -3,8 +3,5 @@
 
 # XDC: new/constraints1.xdc
 
-# IP: ip/fifo_generator_1/fifo_generator_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==fifo_generator_1 || ORIG_REF_NAME==fifo_generator_1} -quiet] -quiet
-
-# IP: ip/decimator_buffer_fifo/decimator_buffer_fifo.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==decimator_buffer_fifo || ORIG_REF_NAME==decimator_buffer_fifo} -quiet] -quiet
+# IP: ip/SignalSplitter_ila/SignalSplitter_ila.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==SignalSplitter_ila || ORIG_REF_NAME==SignalSplitter_ila} -quiet] -quiet

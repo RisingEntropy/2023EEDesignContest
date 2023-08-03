@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log DecimatorBuffer.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source DecimatorBuffer.tcl
+    with args -log SignalSplitter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SignalSplitter.tcl
 
 
 
@@ -9,7 +9,7 @@
   **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
-source DecimatorBuffer.tcl -notrace
+source SignalSplitter.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/EEDesigning/2023/FPGA/FFTModule/IP'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/EEDesigning/2023/FPGA/MultiDemodulationReceiverIP'.
@@ -18,7 +18,7 @@ INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/dat
 Command: read_checkpoint -auto_incremental -incremental C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/utils_1/imports/synth_1/SPIMaster.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/utils_1/imports/synth_1/SPIMaster.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
-Command: synth_design -top DecimatorBuffer -part xc7k70tfbg484-2
+Command: synth_design -top SignalSplitter -part xc7k70tfbg484-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
@@ -27,26 +27,7 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 16204
-WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:35]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:36]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:37]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:38]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:39]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:40]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:41]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:42]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:43]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:44]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:45]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:46]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:47]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:48]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:49]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:50]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:51]
-WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterReceive' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterReceive.v:52]
+INFO: [Synth 8-7075] Helper process launched with PID 33624
 WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterSend' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterSend.v:17]
 WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterSend' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterSend.v:18]
 WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterSend' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterSend.v:19]
@@ -65,182 +46,214 @@ WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterSend' w
 WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterSend' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterSend.v:32]
 WARNING: [Synth 8-9887] parameter declaration becomes local in 'SPIMasterSend' with formal parameter declaration list [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterSend.v:33]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1638.441 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1638.785 ; gain = 0.000
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'SignalSplitter' [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SignalSplitter.v:23]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SignalSplitter.v:68]
+INFO: [Synth 8-6157] synthesizing module 'SignalSplitter_ila' [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/synth_1/.Xil/Vivado-30216-DESKTOP-3R96T2B/realtime/SignalSplitter_ila_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'SignalSplitter_ila' (0#1) [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/synth_1/.Xil/Vivado-30216-DESKTOP-3R96T2B/realtime/SignalSplitter_ila_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'RegisterModule' [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/RegisterModule.v:23]
+WARNING: [Synth 8-324] index 10 out of range [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/RegisterModule.v:70]
+WARNING: [Synth 8-324] index 10 out of range [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/RegisterModule.v:71]
+WARNING: [Synth 8-324] index 11 out of range [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/RegisterModule.v:73]
+WARNING: [Synth 8-324] index 12 out of range [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/RegisterModule.v:73]
+WARNING: [Synth 8-324] index 11 out of range [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/RegisterModule.v:74]
+WARNING: [Synth 8-324] index 12 out of range [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/RegisterModule.v:74]
+INFO: [Synth 8-6157] synthesizing module 'SPISlaveReceive' [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPISlaveReceive.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPISlaveReceive.v:90]
+INFO: [Synth 8-6155] done synthesizing module 'SPISlaveReceive' (0#1) [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPISlaveReceive.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/RegisterModule.v:120]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterModule' (0#1) [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/RegisterModule.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'register_ch2_phase0' does not match port width (32) of module 'RegisterModule' [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SignalSplitter.v:97]
 INFO: [Synth 8-6157] synthesizing module 'DecimatorBuffer' [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/DecimatorBuffer.v:23]
-INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/synth_1/.Xil/Vivado-23724-DESKTOP-3R96T2B/realtime/fifo_generator_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (0#1) [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/synth_1/.Xil/Vivado-23724-DESKTOP-3R96T2B/realtime/fifo_generator_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/synth_1/.Xil/Vivado-30216-DESKTOP-3R96T2B/realtime/fifo_generator_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (0#1) [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/synth_1/.Xil/Vivado-30216-DESKTOP-3R96T2B/realtime/fifo_generator_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'SPIMasterSend' [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterSend.v:5]
 	Parameter SYSTEM_CLK_RATE bound to: 1000 - type: integer 
 	Parameter SPI_RATE bound to: 100 - type: integer 
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterSend.v:61]
 INFO: [Synth 8-6155] done synthesizing module 'SPIMasterSend' (0#1) [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SPIMasterSend.v:5]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/DecimatorBuffer.v:70]
-INFO: [Synth 8-6157] synthesizing module 'ila_0' [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/synth_1/.Xil/Vivado-23724-DESKTOP-3R96T2B/realtime/ila_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'ila_0' (0#1) [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/synth_1/.Xil/Vivado-23724-DESKTOP-3R96T2B/realtime/ila_0_stub.v:5]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/DecimatorBuffer.v:104]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/DecimatorBuffer.v:93]
 INFO: [Synth 8-6155] done synthesizing module 'DecimatorBuffer' (0#1) [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/DecimatorBuffer.v:23]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila'. This will prevent further optimization [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/DecimatorBuffer.v:70]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fifo'. This will prevent further optimization [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/DecimatorBuffer.v:47]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'sender'. This will prevent further optimization [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/DecimatorBuffer.v:61]
-WARNING: [Synth 8-7137] Register decimator_counter_reg in module DecimatorBuffer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/DecimatorBuffer.v:79]
+INFO: [Synth 8-6157] synthesizing module 'DDSModule' [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/DDSModule.v:23]
+INFO: [Synth 8-6157] synthesizing module 'TriangleDDS' [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/TriangleDDS.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'TriangleDDS' (0#1) [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/TriangleDDS.v:23]
+INFO: [Synth 8-6157] synthesizing module 'SineDDS' [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SineDDS.v:23]
+INFO: [Synth 8-6157] synthesizing module 'rom_sine' [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/synth_1/.Xil/Vivado-30216-DESKTOP-3R96T2B/realtime/rom_sine_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'rom_sine' (0#1) [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/synth_1/.Xil/Vivado-30216-DESKTOP-3R96T2B/realtime/rom_sine_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'SineDDS' (0#1) [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SineDDS.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'DDSModule' (0#1) [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/DDSModule.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SignalSplitter.v:143]
+INFO: [Synth 8-6155] done synthesizing module 'SignalSplitter' (0#1) [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SignalSplitter.v:23]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[9] was removed.  [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/RegisterModule.v:59]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[5] was removed.  [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/RegisterModule.v:59]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[2] was removed.  [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/RegisterModule.v:59]
+WARNING: [Synth 8-6014] Unused sequential element delay_counter_reg was removed.  [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/RegisterModule.v:118]
+WARNING: [Synth 8-7137] Register decimator_counter_reg in module DecimatorBuffer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/DecimatorBuffer.v:98]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'decimator_buffer'. This will prevent further optimization [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SignalSplitter.v:101]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila'. This will prevent further optimization [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SignalSplitter.v:68]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'dds1'. This will prevent further optimization [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SignalSplitter.v:111]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'dds2'. This will prevent further optimization [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SignalSplitter.v:125]
+WARNING: [Synth 8-3848] Net register_ch2_phase0_state in module/entity SignalSplitter does not have driver. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SignalSplitter.v:59]
+WARNING: [Synth 8-3848] Net register_ch2_phase0 in module/entity SignalSplitter does not have driver. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SignalSplitter.v:60]
+WARNING: [Synth 8-7129] Port confg[7] in module DDSModule is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[6] in module DDSModule is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[5] in module DDSModule is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[4] in module DDSModule is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[3] in module DDSModule is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[2] in module DDSModule is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clear_ready_flag in module SPISlaveReceive is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1697.406 ; gain = 58.965
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1652.316 ; gain = 13.531
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1697.406 ; gain = 58.965
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1652.316 ; gain = 13.531
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1697.406 ; gain = 58.965
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1652.316 ; gain = 13.531
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1697.406 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1652.316 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'ila'
-Finished Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'ila'
-Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'fifo'
-Finished Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'fifo'
+Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/SignalSplitter_ila/SignalSplitter_ila/ila_0_in_context.xdc] for cell 'ila'
+Finished Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/SignalSplitter_ila/SignalSplitter_ila/ila_0_in_context.xdc] for cell 'ila'
+Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'decimator_buffer/fifo'
+Finished Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'decimator_buffer/fifo'
+Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/rom_sine/rom_sine/rom_sine_in_context.xdc] for cell 'dds1/sine/rom'
+Finished Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/rom_sine/rom_sine/rom_sine_in_context.xdc] for cell 'dds1/sine/rom'
+Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/rom_sine/rom_sine/rom_sine_in_context.xdc] for cell 'dds2/sine/rom'
+Finished Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/rom_sine/rom_sine/rom_sine_in_context.xdc] for cell 'dds2/sine/rom'
 Parsing XDC File [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc]
-WARNING: [Vivado 12-584] No ports matched 'in_MOSI'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:36]
-WARNING: [Vivado 12-584] No ports matched 'in_spi_clk'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:37]
-WARNING: [Vivado 12-584] No ports matched 'out_MOSI'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:38]
-WARNING: [Vivado 12-584] No ports matched 'out_spi_clk'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:39]
-WARNING: [Vivado 12-584] No ports matched 'out_spi_clk'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:40]
-WARNING: [Vivado 12-584] No ports matched 'out_MOSI'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:41]
-WARNING: [Vivado 12-584] No ports matched 'in_MOSI'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:42]
-WARNING: [Vivado 12-584] No ports matched 'in_spi_clk'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:43]
-CRITICAL WARNING: [Netlist 29-154] Cannot set property 'BITSTREAM.CONFIG.SPI_BUSWIDTH' because incorrect value '8' specified. Expecting type 'enum' with possible values of 'NONE,1,2,4'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:54]
+CRITICAL WARNING: [Netlist 29-154] Cannot set property 'BITSTREAM.CONFIG.SPI_BUSWIDTH' because incorrect value '8' specified. Expecting type 'enum' with possible values of 'NONE,1,2,4'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:128]
 Resolution: Please check the value of the property and set to a correct value.
-WARNING: [Vivado 12-584] No ports matched 'dac[13]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:57]
-WARNING: [Vivado 12-584] No ports matched 'dac[12]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:58]
-WARNING: [Vivado 12-584] No ports matched 'dac[11]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:59]
-WARNING: [Vivado 12-584] No ports matched 'dac[10]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:60]
-WARNING: [Vivado 12-584] No ports matched 'dac[9]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:61]
-WARNING: [Vivado 12-584] No ports matched 'dac[8]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:62]
-WARNING: [Vivado 12-584] No ports matched 'dac[7]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:63]
-WARNING: [Vivado 12-584] No ports matched 'dac[6]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:64]
-WARNING: [Vivado 12-584] No ports matched 'dac[5]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:65]
-WARNING: [Vivado 12-584] No ports matched 'dac[4]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:66]
-WARNING: [Vivado 12-584] No ports matched 'dac[3]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:67]
-WARNING: [Vivado 12-584] No ports matched 'dac[2]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:68]
-WARNING: [Vivado 12-584] No ports matched 'dac[1]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:69]
-WARNING: [Vivado 12-584] No ports matched 'dac[0]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:70]
-WARNING: [Vivado 12-584] No ports matched 'dac[0]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:71]
-WARNING: [Vivado 12-584] No ports matched 'dac[1]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:72]
-WARNING: [Vivado 12-584] No ports matched 'dac[2]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:73]
-WARNING: [Vivado 12-584] No ports matched 'dac[3]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:74]
-WARNING: [Vivado 12-584] No ports matched 'dac[4]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:75]
-WARNING: [Vivado 12-584] No ports matched 'dac[5]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:76]
-WARNING: [Vivado 12-584] No ports matched 'dac[8]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:77]
-WARNING: [Vivado 12-584] No ports matched 'dac[7]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:78]
-WARNING: [Vivado 12-584] No ports matched 'dac[6]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:79]
-WARNING: [Vivado 12-584] No ports matched 'dac[9]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:80]
-WARNING: [Vivado 12-584] No ports matched 'dac[10]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:81]
-WARNING: [Vivado 12-584] No ports matched 'dac[11]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:82]
-WARNING: [Vivado 12-584] No ports matched 'dac[12]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:83]
-WARNING: [Vivado 12-584] No ports matched 'dac[13]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:84]
-WARNING: [Vivado 12-584] No ports matched 'dac_sleep'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:86]
-WARNING: [Vivado 12-584] No ports matched 'dac_sleep'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:87]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[0]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:89]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[1]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:90]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[2]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:91]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[3]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:92]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[4]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:93]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[5]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:94]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[6]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:95]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[7]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:96]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[8]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:97]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[9]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:98]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[10]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:99]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[11]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:100]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[12]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:101]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[13]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:102]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[14]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:103]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[15]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:104]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[15]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:105]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[14]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:106]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[13]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:107]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[12]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:108]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[11]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:109]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[10]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:110]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[9]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:111]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[8]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:112]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[7]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:113]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[6]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:114]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[5]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:115]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[4]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:116]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[3]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:117]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[2]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:118]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[1]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:119]
-WARNING: [Vivado 12-584] No ports matched 'adc_data[0]'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:120]
-WARNING: [Vivado 12-584] No ports matched 'cs'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:122]
-WARNING: [Vivado 12-584] No ports matched 'cs'. [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc:124]
 Finished Parsing XDC File [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/DecimatorBuffer_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DecimatorBuffer_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/DecimatorBuffer_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/SignalSplitter_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/SignalSplitter_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1774.723 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1730.184 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1774.723 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1730.184 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1730.184 ; gain = 91.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k70tfbg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1730.184 ; gain = 91.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for ila. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for fifo. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for decimator_buffer/fifo. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds1/sine/rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds2/sine/rom. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1730.184 ; gain = 91.398
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'SPISlaveReceive'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'DecimatorBuffer'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'SignalSplitter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              STATE_IDLE |                            00000 |                           000000
+   STATE_RECEIVING_BIT_0 |                            00001 |                           000001
+   STATE_RECEIVING_BIT_1 |                            00010 |                           000010
+   STATE_RECEIVING_BIT_2 |                            00011 |                           000011
+   STATE_RECEIVING_BIT_3 |                            00100 |                           000100
+   STATE_RECEIVING_BIT_4 |                            00101 |                           000101
+   STATE_RECEIVING_BIT_5 |                            00110 |                           000110
+   STATE_RECEIVING_BIT_6 |                            00111 |                           000111
+   STATE_RECEIVING_BIT_7 |                            01000 |                           001000
+   STATE_RECEIVING_BIT_8 |                            01001 |                           001001
+   STATE_RECEIVING_BIT_9 |                            01010 |                           001010
+  STATE_RECEIVING_BIT_10 |                            01011 |                           001011
+  STATE_RECEIVING_BIT_11 |                            01100 |                           001100
+  STATE_RECEIVING_BIT_12 |                            01101 |                           001101
+  STATE_RECEIVING_BIT_13 |                            01110 |                           001110
+  STATE_RECEIVING_BIT_14 |                            01111 |                           001111
+  STATE_RECEIVING_BIT_15 |                            10000 |                           010000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'SPISlaveReceive'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              STATE_IDLE |                             0001 |                              000
+        STATE_COLLECTING |                             0010 |                              001
+           STATE_SENDING |                             0100 |                              010
+            STATE_FINISH |                             1000 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'DecimatorBuffer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+          STATE_COUNTING |                              001 |                               00
+  STATE_WAITING_FOR_JUMP |                              010 |                               01
+         STATE_RESET_DDS |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'SignalSplitter'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1730.184 ; gain = 91.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input   32 Bit       Adders := 2     
 	   2 Input    7 Bit       Adders := 1     
 	   2 Input    6 Bit       Adders := 1     
 	   2 Input    3 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 1     
 +---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 9     
+	               14 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
 	                3 Bit    Registers := 2     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 7     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 17    
 +---Muxes : 
-	   2 Input    8 Bit        Muxes := 4     
+	   2 Input   32 Bit        Muxes := 8     
+	  17 Input   16 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   14 Bit        Muxes := 4     
+	   3 Input   14 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 5     
+	   4 Input   10 Bit        Muxes := 1     
 	   4 Input    8 Bit        Muxes := 1     
 	   2 Input    7 Bit        Muxes := 2     
 	   2 Input    6 Bit        Muxes := 2     
+	  19 Input    5 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
 	   4 Input    3 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 13    
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 9     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 52    
+	  17 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 16    
 	  18 Input    1 Bit        Muxes := 3     
-	   4 Input    1 Bit        Muxes := 7     
+	   3 Input    1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -257,26 +270,38 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port confg[7] in module DDSModule is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[6] in module DDSModule is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[5] in module DDSModule is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[4] in module DDSModule is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[3] in module DDSModule is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[2] in module DDSModule is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[7] in module DDSModule__xdcDup__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[6] in module DDSModule__xdcDup__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[5] in module DDSModule__xdcDup__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[4] in module DDSModule__xdcDup__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[3] in module DDSModule__xdcDup__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port confg[2] in module DDSModule__xdcDup__1 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 1730.184 ; gain = 91.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 1730.184 ; gain = 91.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 1730.184 ; gain = 91.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1730.184 ; gain = 91.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -294,97 +319,97 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.184 ; gain = 91.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.184 ; gain = 91.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.184 ; gain = 91.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.184 ; gain = 91.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.184 ; gain = 91.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.184 ; gain = 91.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+-----------------+----------+
-|      |BlackBox name    |Instances |
-+------+-----------------+----------+
-|1     |fifo_generator_0 |         1|
-|2     |ila_0            |         1|
-+------+-----------------+----------+
++------+-------------------+----------+
+|      |BlackBox name      |Instances |
++------+-------------------+----------+
+|1     |fifo_generator_0   |         1|
+|2     |rom_sine           |         2|
+|3     |SignalSplitter_ila |         1|
++------+-------------------+----------+
 
 Report Cell Usage: 
-+------+---------------+------+
-|      |Cell           |Count |
-+------+---------------+------+
-|1     |fifo_generator |     1|
-|2     |ila            |     1|
-|3     |BUFG           |     1|
-|4     |LUT1           |     1|
-|5     |LUT2           |    20|
-|6     |LUT3           |    15|
-|7     |LUT4           |    12|
-|8     |LUT5           |    10|
-|9     |LUT6           |    25|
-|10    |FDCE           |    15|
-|11    |FDCPE          |     8|
-|12    |FDPE           |     8|
-|13    |FDRE           |    15|
-|14    |LDC            |     8|
-|15    |IBUF           |    19|
-|16    |OBUF           |     3|
-+------+---------------+------+
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |SignalSplitter_ila |     1|
+|2     |fifo_generator     |     1|
+|3     |rom_sine           |     2|
+|5     |BUFG               |     1|
+|6     |CARRY4             |    44|
+|7     |LUT1               |     4|
+|8     |LUT2               |    58|
+|9     |LUT3               |   165|
+|10    |LUT4               |   197|
+|11    |LUT5               |    20|
+|12    |LUT6               |   104|
+|13    |FDCE               |     6|
+|14    |FDPE               |     1|
+|15    |FDRE               |   392|
+|16    |FDSE               |     8|
+|17    |IBUF               |    22|
+|18    |OBUF               |    33|
++------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.184 ; gain = 91.398
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 1774.723 ; gain = 58.965
-Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1774.723 ; gain = 136.281
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:27 . Memory (MB): peak = 1730.184 ; gain = 13.531
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.184 ; gain = 91.398
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1774.723 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1730.184 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 44 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1774.723 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1730.184 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 16 instances were transformed.
-  FDCPE => FDCPE (FDCE, FDPE, LDCE, LUT3, VCC): 8 instances
-  LDC => LDCE: 8 instances
+No Unisim elements were transformed.
 
-Synth Design complete, checksum: a75a7922
+Synth Design complete, checksum: 2f1f02ed
 INFO: [Common 17-83] Releasing license: Synthesis
-39 Infos, 112 Warnings, 1 Critical Warnings and 0 Errors encountered.
+63 Infos, 52 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1774.723 ; gain = 136.281
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:33 . Memory (MB): peak = 1730.184 ; gain = 91.398
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/synth_1/DecimatorBuffer.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file DecimatorBuffer_utilization_synth.rpt -pb DecimatorBuffer_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Aug  3 14:11:54 2023...
+INFO: [Common 17-1381] The checkpoint 'C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/synth_1/SignalSplitter.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file SignalSplitter_utilization_synth.rpt -pb SignalSplitter_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Aug  3 22:07:01 2023...

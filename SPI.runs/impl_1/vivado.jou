@@ -2,12 +2,12 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Aug  3 14:12:02 2023
-# Process ID: 27128
+# Start of session at: Thu Aug  3 22:07:09 2023
+# Process ID: 32844
 # Current directory: C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/impl_1
-# Command line: vivado.exe -log DecimatorBuffer.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source DecimatorBuffer.tcl -notrace
-# Log file: C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/impl_1/DecimatorBuffer.vdi
+# Command line: vivado.exe -log SignalSplitter.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source SignalSplitter.tcl -notrace
+# Log file: C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/impl_1/SignalSplitter.vdi
 # Journal file: C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/impl_1\vivado.jou
 # Running On: DESKTOP-3R96T2B, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 12, Host memory: 68448 MB
 #-----------------------------------------------------------
-source DecimatorBuffer.tcl -notrace
+source SignalSplitter.tcl -notrace

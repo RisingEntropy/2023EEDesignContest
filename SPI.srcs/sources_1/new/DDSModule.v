@@ -30,7 +30,8 @@ module DDSModule(
         input wire[31:0] FTW,
         input wire confg_state,
         input wire[7:0] confg,
-        output reg[13:0] dds_out
+        output reg[13:0] dds_out,
+        output reg dac_sleep = 0
     );
     reg enable_triangle = 0;
     reg enable_sin = 0;
@@ -67,18 +68,22 @@ module DDSModule(
                     dds_out <= 14'b00_0000_0000_0000;
                     enable_sin <= 0;
                     enable_triangle <= 0;
+                    dac_sleep <= 0;
                 end else if(confg[1:0]==2'b01)begin
                     dds_out <= sin_out;
                     enable_sin <= 1;
                     enable_triangle <= 0;
-                end else if(confg[1:0]==2'b01)begin
+                    dac_sleep <= 0;
+                end else if(confg[1:0]==2'b10)begin
                     dds_out <= triangle_out;
                     enable_sin <= 0;
                     enable_triangle <= 1;
+                    dac_sleep <= 0;
                 end else begin
                     dds_out <= sin_out;
                     enable_sin <= 1;
                     enable_triangle <= 0;
+                    dac_sleep <= 0;
                 end
             end else begin
                 dds_out <= dds_out;

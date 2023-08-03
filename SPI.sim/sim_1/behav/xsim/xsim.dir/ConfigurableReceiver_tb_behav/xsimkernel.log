@@ -1,7 +1,0 @@
-Running: xsim.dir/ConfigurableReceiver_tb_behav/xsimk.exe -simmode gui -wdb ConfigurableReceiver_tb_behav.wdb -simrunnum 0 -socket 51928
-Design successfully loaded
-Design Loading Memory Usage: 8460 KB (Peak: 8460 KB)
-Design Loading CPU Usage: 0 ms
-Simulation completed
-Simulation Memory Usage: 17352 KB (Peak: 17352 KB)
-Simulation CPU Usage: 1265 ms

@@ -94,15 +94,6 @@ module RegisterModule(
         .data_ready(spi_data_ready),
         .data(spi_data)
     );
-    ila_2 ila(
-        .clk(clk),
-        .probe0(current_state),
-        .probe1(spi_data),
-        .probe2(spi_receiver_busy),
-        .probe3(spi_data_ready),
-        .probe4(rstn),
-        .probe5(spi_clear_ready_flag)
-    );
     always@(posedge clk)begin
         if(rstn==0)begin
             busy_edge <= 0;
@@ -113,12 +104,17 @@ module RegisterModule(
     always@(posedge clk)begin
         if(rstn==0)begin
             current_state <= STATE_IDLE;
-            register_state <= 4'b1111;
+            register_state <= 10'b11_1111_1111;
             registers[0] <= 0;
             registers[1] <= 0;
             registers[2] <= 0;
             registers[3] <= 0;
             registers[4] <= 0;
+            registers[5] <= 0;
+            registers[6] <= 0;
+            registers[7] <= 0;
+            registers[8] <= 0;
+            registers[9] <= 0;
             delay_counter <= 0;
         end else begin
             case(current_state)

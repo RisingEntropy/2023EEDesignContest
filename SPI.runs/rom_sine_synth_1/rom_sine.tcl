@@ -70,6 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "rom_sine_synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 5
+set_param xicom.use_bs_reader 1
 set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net stm32_clk_led_OBUF has multiple drivers: stm32_clk_led_reg/Q, and stm32_clk_led_reg__0/Q.}}  -suppress 
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
@@ -88,13 +91,14 @@ set_property target_language Verilog [current_project]
 set_property ip_repo_paths {
   d:/EEDesigning/2023/FPGA/FFTModule/IP
   d:/EEDesigning/2023/FPGA/MultiDemodulationReceiverIP
+  d:/EEDesigning/2023/Decimator
 } [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/ip/rom_sine/rom_sine.xci
+read_ip -quiet C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/ip/rom_sine/rom_sine.xci
 set_property used_in_implementation false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/rom_sine/rom_sine_ooc.xdc]
 
 OPTRACE "Adding files" END { }

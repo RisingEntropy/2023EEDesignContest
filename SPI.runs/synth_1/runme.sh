@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log DecimatorBuffer.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source DecimatorBuffer.tcl
+EAStep vivado -log SignalSplitter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SignalSplitter.tcl

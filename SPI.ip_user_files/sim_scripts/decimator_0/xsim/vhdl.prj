@@ -1,5 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../../SPI.gen/sources_1/ip/decimator_0/decimator_cic_compiler_v4_0_i0/sim/decimator_cic_compiler_v4_0_i0.vhd" \
-"../../../../SPI.gen/sources_1/ip/decimator_0/decimator_fir_compiler_v7_2_i0/sim/decimator_fir_compiler_v7_2_i0.vhd" \
-
-nosort

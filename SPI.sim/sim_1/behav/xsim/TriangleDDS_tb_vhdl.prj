@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../SPI.gen/sources_1/ip/fftmodule_0/fftmodule_cordic_v6_0_i0/sim/fftmodule_cordic_v6_0_i0.vhd" \
+"../../../../SPI.gen/sources_1/ip/fftmodule_0/fftmodule_xfft_v9_1_i0/sim/fftmodule_xfft_v9_1_i0.vhd" \
+
+# Do not sort compile order
+nosort

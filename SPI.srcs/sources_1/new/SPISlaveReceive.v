@@ -51,18 +51,6 @@ module SPISlaveReceive(
     reg[5:0] current_state = STATE_IDLE;
     reg[1:0] internal_spi_clk = 2'b00;
     
-    ila_3 ila(
-        .clk(clk),
-        .probe0(spi_clk),
-        .probe1(MOSI),
-        .probe2(clear_ready_flag),
-        .probe3(busy),
-        .probe4(data_ready),
-        .probe5(data),
-        .probe6(current_state),
-        .probe7(internal_spi_clk)
-        
-    );
     always@(posedge clk)begin
         if(rstn==0)begin
             internal_spi_clk <= {spi_clk,spi_clk};

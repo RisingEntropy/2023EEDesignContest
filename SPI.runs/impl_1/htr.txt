@@ -6,4 +6,4 @@ REM          to be invoked for Vivado to track run status.
 REM Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 REM
 
-vivado -log DecimatorBuffer.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source DecimatorBuffer.tcl -notrace
+vivado -log SignalSplitter.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source SignalSplitter.tcl -notrace

@@ -53,7 +53,7 @@ module SineDDS(
     end
     rom_sine rom(
         .clka(clk),
-        .addra(phase[31:31-14]),
+        .addra(phase[31:31-13]),
         .douta(rom_out),
         .ena(rstn)
     ); 

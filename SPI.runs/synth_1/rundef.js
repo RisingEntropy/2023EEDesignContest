@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log DecimatorBuffer.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source DecimatorBuffer.tcl" );
+         "-log SignalSplitter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SignalSplitter.tcl" );
 
 
 

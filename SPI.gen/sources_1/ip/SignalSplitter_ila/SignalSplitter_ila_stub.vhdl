@@ -1,0 +1,33 @@
+-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-- --------------------------------------------------------------------------------
+-- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+-- Date        : Sat Jul 29 17:09:07 2023
+-- Host        : DESKTOP-3R96T2B running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub -rename_top SignalSplitter_ila -prefix
+--               SignalSplitter_ila_ ila_0_stub.vhdl
+-- Design      : ila_0
+-- Purpose     : Stub declaration of top-level module interface
+-- Device      : xc7k70tfbg484-2
+-- --------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity SignalSplitter_ila is
+  Port ( 
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 15 downto 0 )
+  );
+
+end SignalSplitter_ila;
+
+architecture stub of SignalSplitter_ila is
+attribute syn_black_box : boolean;
+attribute black_box_pad_pin : string;
+attribute syn_black_box of stub : architecture is true;
+attribute black_box_pad_pin of stub : architecture is "clk,probe0[15:0],probe1[15:0],probe2[15:0]";
+attribute X_CORE_INFO : string;
+attribute X_CORE_INFO of stub : architecture is "ila,Vivado 2022.1";
+begin
+end;
