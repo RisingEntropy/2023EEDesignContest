@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../SPI.ip_user_files/ipstatic/work/hdl" \
+"FrequencyScanner_tb_time_synth.v" \
+"../../../../../SPI.srcs/sim_1/new/FFTTest_tb.v" \
+"../../../../../SPI.srcs/sim_1/new/SPI_tb.v" \
+"../../../../../SPI.srcs/sim_1/new/FrequencyScanner_tb.v" \
+
+# Do not sort compile order
+nosort

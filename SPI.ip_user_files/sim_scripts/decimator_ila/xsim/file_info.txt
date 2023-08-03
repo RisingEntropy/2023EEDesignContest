@@ -1,0 +1,2 @@
+decimator_ila.v,verilog,xil_defaultlib,../../../../SPI.gen/sources_1/ip/decimator_ila/sim/decimator_ila.v,incdir="../../../../SPI.gen/sources_1/ip/decimator_ila/hdl/verilog"
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../SPI.gen/sources_1/ip/rom_sine/sim/rom_sine.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

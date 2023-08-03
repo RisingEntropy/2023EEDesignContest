@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "secureip" --snapshot "FrequencyScanner_tb_func_synth" "xil_defaultlib.FrequencyScanner_tb" "xil_defaultlib.glbl" -log "elaborate.log" 

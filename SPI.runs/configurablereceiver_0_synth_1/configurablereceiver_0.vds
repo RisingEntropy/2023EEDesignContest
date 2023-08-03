@@ -1,0 +1,1177 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Aug  1 17:22:59 2023
+# Process ID: 24572
+# Current directory: C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1
+# Command line: vivado.exe -log configurablereceiver_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source configurablereceiver_0.tcl
+# Log file: C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1/configurablereceiver_0.vds
+# Journal file: C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1\vivado.jou
+# Running On: DESKTOP-3R96T2B, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 8, Host memory: 68448 MB
+#-----------------------------------------------------------
+source configurablereceiver_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/EEDesigning/2023/FPGA/FFTModule/IP'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/EEDesigning/2023/FPGA/MultiDemodulationReceiverIP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top configurablereceiver_0 -part xc7k70tfbg484-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Device 21-403] Loading part xc7k70tfbg484-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22488
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1624.645 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'configurablereceiver_0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/synth/configurablereceiver_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'configurablereceiver' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:618]
+INFO: [Synth 8-6157] synthesizing module 'configurablereceiver_default_clock_driver' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:558]
+INFO: [Synth 8-6157] synthesizing module 'xlclockdriver' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/xlclockdriver_rd.v:22]
+INFO: [Synth 8-6157] synthesizing module 'synth_reg_w_init' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg_w_init.v:3]
+INFO: [Synth 8-6157] synthesizing module 'single_reg_w_init' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg_w_init.v:45]
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:27836]
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:27836]
+INFO: [Synth 8-6155] done synthesizing module 'single_reg_w_init' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg_w_init.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'synth_reg_w_init' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg_w_init.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'xlclockdriver' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/xlclockdriver_rd.v:22]
+WARNING: [Synth 8-7071] port 'clr' of module 'xlclockdriver' is unconnected for instance 'clockdriver_x2' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:575]
+WARNING: [Synth 8-7071] port 'ce_logic' of module 'xlclockdriver' is unconnected for instance 'clockdriver_x2' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:575]
+WARNING: [Synth 8-7023] instance 'clockdriver_x2' of module 'xlclockdriver' has 7 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:575]
+INFO: [Synth 8-6157] synthesizing module 'xlclockdriver__parameterized0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/xlclockdriver_rd.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'xlclockdriver__parameterized0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/xlclockdriver_rd.v:22]
+WARNING: [Synth 8-7071] port 'clr' of module 'xlclockdriver' is unconnected for instance 'clockdriver_x1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:586]
+WARNING: [Synth 8-7071] port 'ce_logic' of module 'xlclockdriver' is unconnected for instance 'clockdriver_x1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:586]
+WARNING: [Synth 8-7023] instance 'clockdriver_x1' of module 'xlclockdriver' has 7 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:586]
+INFO: [Synth 8-6157] synthesizing module 'xlclockdriver__parameterized1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/xlclockdriver_rd.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'xlclockdriver__parameterized1' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/xlclockdriver_rd.v:22]
+WARNING: [Synth 8-7071] port 'clr' of module 'xlclockdriver' is unconnected for instance 'clockdriver_x0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:597]
+WARNING: [Synth 8-7071] port 'ce_logic' of module 'xlclockdriver' is unconnected for instance 'clockdriver_x0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:597]
+WARNING: [Synth 8-7023] instance 'clockdriver_x0' of module 'xlclockdriver' has 7 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:597]
+INFO: [Synth 8-6157] synthesizing module 'xlclockdriver__parameterized2' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/xlclockdriver_rd.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'xlclockdriver__parameterized2' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/xlclockdriver_rd.v:22]
+WARNING: [Synth 8-7071] port 'clr' of module 'xlclockdriver' is unconnected for instance 'clockdriver' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:608]
+WARNING: [Synth 8-7071] port 'ce_logic' of module 'xlclockdriver' is unconnected for instance 'clockdriver' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:608]
+WARNING: [Synth 8-7023] instance 'clockdriver' of module 'xlclockdriver' has 7 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:608]
+INFO: [Synth 8-6155] done synthesizing module 'configurablereceiver_default_clock_driver' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:558]
+INFO: [Synth 8-6157] synthesizing module 'configurablereceiver_struct' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:7]
+INFO: [Synth 8-6157] synthesizing module 'configurablereceiver_xladdsub' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:355]
+INFO: [Synth 8-638] synthesizing module 'configurablereceiver_c_addsub_v12_0_i0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_c_addsub_v12_0_i0/synth/configurablereceiver_c_addsub_v12_0_i0.vhd:69]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_IMPLEMENTATION bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 17 - type: integer 
+	Parameter C_B_WIDTH bound to: 17 - type: integer 
+	Parameter C_OUT_WIDTH bound to: 17 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_TYPE bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_ADD_MODE bound to: 1 - type: integer 
+	Parameter C_B_CONSTANT bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 00000000000000000 - type: string 
+	Parameter C_AINIT_VAL bound to: 0 - type: string 
+	Parameter C_SINIT_VAL bound to: 0 - type: string 
+	Parameter C_CE_OVERRIDES_BYPASS bound to: 1 - type: integer 
+	Parameter C_BYPASS_LOW bound to: 0 - type: integer 
+	Parameter C_SCLR_OVERRIDES_SSET bound to: 1 - type: integer 
+	Parameter C_HAS_C_IN bound to: 0 - type: integer 
+	Parameter C_HAS_C_OUT bound to: 0 - type: integer 
+	Parameter C_BORROW_LOW bound to: 1 - type: integer 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_BYPASS bound to: 0 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_HAS_SSET bound to: 0 - type: integer 
+	Parameter C_HAS_SINIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_14' declared at 'c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_cordic_v6_0_i0/hdl/c_addsub_v12_0_vh_rfs.vhd:7026' bound to instance 'U0' of component 'c_addsub_v12_0_14' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_c_addsub_v12_0_i0/synth/configurablereceiver_c_addsub_v12_0_i0.vhd:136]
+INFO: [Synth 8-256] done synthesizing module 'configurablereceiver_c_addsub_v12_0_i0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_c_addsub_v12_0_i0/synth/configurablereceiver_c_addsub_v12_0_i0.vhd:69]
+INFO: [Synth 8-6157] synthesizing module 'align_input' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:260]
+INFO: [Synth 8-6157] synthesizing module 'extend_msb' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:235]
+INFO: [Synth 8-6157] synthesizing module 'sign_ext' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:211]
+INFO: [Synth 8-6155] done synthesizing module 'sign_ext' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:211]
+INFO: [Synth 8-6155] done synthesizing module 'extend_msb' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:235]
+INFO: [Synth 8-6155] done synthesizing module 'align_input' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:260]
+INFO: [Synth 8-6157] synthesizing module 'convert_type' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:775]
+INFO: [Synth 8-6157] synthesizing module 'trunc' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:539]
+INFO: [Synth 8-6157] synthesizing module 'extend_msb__parameterized0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:235]
+INFO: [Synth 8-6157] synthesizing module 'sign_ext__parameterized0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:211]
+INFO: [Synth 8-6155] done synthesizing module 'sign_ext__parameterized0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:211]
+INFO: [Synth 8-6155] done synthesizing module 'extend_msb__parameterized0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:235]
+INFO: [Synth 8-6155] done synthesizing module 'trunc' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:539]
+INFO: [Synth 8-6157] synthesizing module 'wrap_arith' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:754]
+INFO: [Synth 8-6157] synthesizing module 'cast' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'cast' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'wrap_arith' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:754]
+INFO: [Synth 8-6157] synthesizing module 'cast__parameterized0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'cast__parameterized0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'convert_type' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:775]
+INFO: [Synth 8-6155] done synthesizing module 'configurablereceiver_xladdsub' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:355]
+WARNING: [Synth 8-7071] port 'c_in' of module 'configurablereceiver_xladdsub' is unconnected for instance 'addsub' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:129]
+WARNING: [Synth 8-7071] port 'rst' of module 'configurablereceiver_xladdsub' is unconnected for instance 'addsub' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:129]
+WARNING: [Synth 8-7071] port 'c_out' of module 'configurablereceiver_xladdsub' is unconnected for instance 'addsub' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:129]
+WARNING: [Synth 8-7023] instance 'addsub' of module 'configurablereceiver_xladdsub' has 10 connections declared, but only 7 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:129]
+INFO: [Synth 8-6157] synthesizing module 'configurablereceiver_xladdsub__parameterized0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:355]
+INFO: [Synth 8-638] synthesizing module 'configurablereceiver_c_addsub_v12_0_i1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_c_addsub_v12_0_i1/synth/configurablereceiver_c_addsub_v12_0_i1.vhd:69]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_IMPLEMENTATION bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 17 - type: integer 
+	Parameter C_B_WIDTH bound to: 17 - type: integer 
+	Parameter C_OUT_WIDTH bound to: 17 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_TYPE bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_ADD_MODE bound to: 0 - type: integer 
+	Parameter C_B_CONSTANT bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 00000000000000000 - type: string 
+	Parameter C_AINIT_VAL bound to: 0 - type: string 
+	Parameter C_SINIT_VAL bound to: 0 - type: string 
+	Parameter C_CE_OVERRIDES_BYPASS bound to: 1 - type: integer 
+	Parameter C_BYPASS_LOW bound to: 0 - type: integer 
+	Parameter C_SCLR_OVERRIDES_SSET bound to: 1 - type: integer 
+	Parameter C_HAS_C_IN bound to: 0 - type: integer 
+	Parameter C_HAS_C_OUT bound to: 0 - type: integer 
+	Parameter C_BORROW_LOW bound to: 1 - type: integer 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_BYPASS bound to: 0 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_HAS_SSET bound to: 0 - type: integer 
+	Parameter C_HAS_SINIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_14' declared at 'c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_cordic_v6_0_i0/hdl/c_addsub_v12_0_vh_rfs.vhd:7026' bound to instance 'U0' of component 'c_addsub_v12_0_14' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_c_addsub_v12_0_i1/synth/configurablereceiver_c_addsub_v12_0_i1.vhd:136]
+INFO: [Synth 8-256] done synthesizing module 'configurablereceiver_c_addsub_v12_0_i1' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_c_addsub_v12_0_i1/synth/configurablereceiver_c_addsub_v12_0_i1.vhd:69]
+INFO: [Synth 8-6155] done synthesizing module 'configurablereceiver_xladdsub__parameterized0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:355]
+WARNING: [Synth 8-7071] port 'c_in' of module 'configurablereceiver_xladdsub' is unconnected for instance 'addsub1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:159]
+WARNING: [Synth 8-7071] port 'rst' of module 'configurablereceiver_xladdsub' is unconnected for instance 'addsub1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:159]
+WARNING: [Synth 8-7071] port 'c_out' of module 'configurablereceiver_xladdsub' is unconnected for instance 'addsub1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:159]
+WARNING: [Synth 8-7023] instance 'addsub1' of module 'configurablereceiver_xladdsub' has 10 connections declared, but only 7 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:159]
+INFO: [Synth 8-6157] synthesizing module 'xlcic_compiler_e73e18443806dcef631c8903d930ad9c' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:532]
+INFO: [Synth 8-6157] synthesizing module 'synth_reg_w_init__parameterized0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg_w_init.v:3]
+INFO: [Synth 8-6157] synthesizing module 'single_reg_w_init__parameterized0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg_w_init.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'single_reg_w_init__parameterized0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg_w_init.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'synth_reg_w_init__parameterized0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg_w_init.v:3]
+INFO: [Synth 8-638] synthesizing module 'configurablereceiver_cic_compiler_v4_0_i0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_cic_compiler_v4_0_i0/synth/configurablereceiver_cic_compiler_v4_0_i0.vhd:71]
+	Parameter C_COMPONENT_NAME bound to: configurablereceiver_cic_compiler_v4_0_i0 - type: string 
+	Parameter C_FILTER_TYPE bound to: 1 - type: integer 
+	Parameter C_NUM_STAGES bound to: 6 - type: integer 
+	Parameter C_DIFF_DELAY bound to: 1 - type: integer 
+	Parameter C_RATE bound to: 40 - type: integer 
+	Parameter C_INPUT_WIDTH bound to: 22 - type: integer 
+	Parameter C_OUTPUT_WIDTH bound to: 22 - type: integer 
+	Parameter C_USE_DSP bound to: 1 - type: integer 
+	Parameter C_HAS_ROUNDING bound to: 0 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_RATE_TYPE bound to: 0 - type: integer 
+	Parameter C_MIN_RATE bound to: 40 - type: integer 
+	Parameter C_MAX_RATE bound to: 40 - type: integer 
+	Parameter C_SAMPLE_FREQ bound to: 1 - type: integer 
+	Parameter C_CLK_FREQ bound to: 1 - type: integer 
+	Parameter C_USE_STREAMING_INTERFACE bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: kintex7 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_C1 bound to: 29 - type: integer 
+	Parameter C_C2 bound to: 28 - type: integer 
+	Parameter C_C3 bound to: 27 - type: integer 
+	Parameter C_C4 bound to: 26 - type: integer 
+	Parameter C_C5 bound to: 26 - type: integer 
+	Parameter C_C6 bound to: 25 - type: integer 
+	Parameter C_I1 bound to: 53 - type: integer 
+	Parameter C_I2 bound to: 48 - type: integer 
+	Parameter C_I3 bound to: 43 - type: integer 
+	Parameter C_I4 bound to: 39 - type: integer 
+	Parameter C_I5 bound to: 35 - type: integer 
+	Parameter C_I6 bound to: 31 - type: integer 
+	Parameter C_S_AXIS_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_DATA_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_M_AXIS_DATA_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_M_AXIS_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_DOUT_TREADY bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'cic_compiler_v4_0_16' declared at 'c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_cic_compiler_v4_0_i0/hdl/cic_compiler_v4_0_vh_rfs.vhd:16133' bound to instance 'U0' of component 'cic_compiler_v4_0_16' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_cic_compiler_v4_0_i0/synth/configurablereceiver_cic_compiler_v4_0_i0.vhd:156]
+INFO: [Synth 8-256] done synthesizing module 'configurablereceiver_cic_compiler_v4_0_i0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_cic_compiler_v4_0_i0/synth/configurablereceiver_cic_compiler_v4_0_i0.vhd:71]
+INFO: [Synth 8-6155] done synthesizing module 'xlcic_compiler_e73e18443806dcef631c8903d930ad9c' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:532]
+INFO: [Synth 8-6157] synthesizing module 'xlcordic_83fa67396ed082330d0463c6be56e9ca' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:624]
+INFO: [Synth 8-638] synthesizing module 'configurablereceiver_cordic_v6_0_i0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_cordic_v6_0_i0/synth/configurablereceiver_cordic_v6_0_i0.vhd:70]
+	Parameter C_ARCHITECTURE bound to: 2 - type: integer 
+	Parameter C_CORDIC_FUNCTION bound to: 1 - type: integer 
+	Parameter C_COARSE_ROTATE bound to: 1 - type: integer 
+	Parameter C_DATA_FORMAT bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ACLK bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_CARTESIAN bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_PHASE bound to: 0 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_INPUT_WIDTH bound to: 16 - type: integer 
+	Parameter C_ITERATIONS bound to: 0 - type: integer 
+	Parameter C_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter C_PHASE_FORMAT bound to: 1 - type: integer 
+	Parameter C_PIPELINE_MODE bound to: -2 - type: integer 
+	Parameter C_PRECISION bound to: 0 - type: integer 
+	Parameter C_ROUND_MODE bound to: 0 - type: integer 
+	Parameter C_SCALE_COMP bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_PHASE_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_PHASE_TLAST bound to: 0 - type: integer 
+	Parameter C_S_AXIS_PHASE_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXIS_PHASE_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_CARTESIAN_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_CARTESIAN_TLAST bound to: 0 - type: integer 
+	Parameter C_S_AXIS_CARTESIAN_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_CARTESIAN_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'cordic_v6_0_18' declared at 'c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_cordic_v6_0_i0/hdl/cordic_v6_0_vh_rfs.vhd:10135' bound to instance 'U0' of component 'cordic_v6_0_18' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_cordic_v6_0_i0/synth/configurablereceiver_cordic_v6_0_i0.vhd:147]
+INFO: [Synth 8-256] done synthesizing module 'configurablereceiver_cordic_v6_0_i0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_cordic_v6_0_i0/synth/configurablereceiver_cordic_v6_0_i0.vhd:70]
+INFO: [Synth 8-6155] done synthesizing module 'xlcordic_83fa67396ed082330d0463c6be56e9ca' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:624]
+INFO: [Synth 8-6157] synthesizing module 'sysgen_concat_81c0ab3d57' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'sysgen_concat_81c0ab3d57' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:39]
+INFO: [Synth 8-6157] synthesizing module 'sysgen_constant_c7a5a13a15' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'sysgen_constant_c7a5a13a15' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:55]
+INFO: [Synth 8-6157] synthesizing module 'sysgen_constant_00c9d0fb59' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'sysgen_constant_00c9d0fb59' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:63]
+INFO: [Synth 8-6157] synthesizing module 'sysgen_constant_862b67d196' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'sysgen_constant_862b67d196' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:71]
+INFO: [Synth 8-6157] synthesizing module 'sysgen_constant_58b6cfa76f' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'sysgen_constant_58b6cfa76f' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:79]
+INFO: [Synth 8-6157] synthesizing module 'sysgen_constant_3b0c132fd0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'sysgen_constant_3b0c132fd0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:87]
+INFO: [Synth 8-6157] synthesizing module 'xldds_compiler_c21522467d2c52044e742341270d1e2b' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:654]
+INFO: [Synth 8-638] synthesizing module 'configurablereceiver_dds_compiler_v6_0_i0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_dds_compiler_v6_0_i0/synth/configurablereceiver_dds_compiler_v6_0_i0.vhd:70]
+WARNING: [Synth 8-5640] Port 'debug_axi_pinc_in' is missing in component declaration [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_dds_compiler_v6_0_i0/synth/configurablereceiver_dds_compiler_v6_0_i0.vhd:73]
+WARNING: [Synth 8-5640] Port 'debug_axi_poff_in' is missing in component declaration [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_dds_compiler_v6_0_i0/synth/configurablereceiver_dds_compiler_v6_0_i0.vhd:73]
+WARNING: [Synth 8-5640] Port 'debug_axi_resync_in' is missing in component declaration [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_dds_compiler_v6_0_i0/synth/configurablereceiver_dds_compiler_v6_0_i0.vhd:73]
+WARNING: [Synth 8-5640] Port 'debug_axi_chan_in' is missing in component declaration [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_dds_compiler_v6_0_i0/synth/configurablereceiver_dds_compiler_v6_0_i0.vhd:73]
+WARNING: [Synth 8-5640] Port 'debug_core_nd' is missing in component declaration [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_dds_compiler_v6_0_i0/synth/configurablereceiver_dds_compiler_v6_0_i0.vhd:73]
+WARNING: [Synth 8-5640] Port 'debug_phase' is missing in component declaration [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_dds_compiler_v6_0_i0/synth/configurablereceiver_dds_compiler_v6_0_i0.vhd:73]
+WARNING: [Synth 8-5640] Port 'debug_phase_nd' is missing in component declaration [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_dds_compiler_v6_0_i0/synth/configurablereceiver_dds_compiler_v6_0_i0.vhd:73]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_MODE_OF_OPERATION bound to: 0 - type: integer 
+	Parameter C_MODULUS bound to: 9 - type: integer 
+	Parameter C_ACCUMULATOR_WIDTH bound to: 24 - type: integer 
+	Parameter C_CHANNELS bound to: 1 - type: integer 
+	Parameter C_HAS_PHASE_OUT bound to: 0 - type: integer 
+	Parameter C_HAS_PHASEGEN bound to: 1 - type: integer 
+	Parameter C_HAS_SINCOS bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: 7 - type: integer 
+	Parameter C_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_NEGATIVE_COSINE bound to: 0 - type: integer 
+	Parameter C_NEGATIVE_SINE bound to: 1 - type: integer 
+	Parameter C_NOISE_SHAPING bound to: 0 - type: integer 
+	Parameter C_OUTPUTS_REQUIRED bound to: 2 - type: integer 
+	Parameter C_OUTPUT_FORM bound to: 0 - type: integer 
+	Parameter C_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter C_PHASE_ANGLE_WIDTH bound to: 16 - type: integer 
+	Parameter C_PHASE_INCREMENT bound to: 1 - type: integer 
+	Parameter C_PHASE_INCREMENT_VALUE bound to: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 - type: string 
+	Parameter C_RESYNC bound to: 0 - type: integer 
+	Parameter C_PHASE_OFFSET bound to: 0 - type: integer 
+	Parameter C_PHASE_OFFSET_VALUE bound to: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 - type: string 
+	Parameter C_OPTIMISE_GOAL bound to: 0 - type: integer 
+	Parameter C_USE_DSP48 bound to: 0 - type: integer 
+	Parameter C_POR_MODE bound to: 0 - type: integer 
+	Parameter C_AMPLITUDE bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_HAS_S_PHASE bound to: 0 - type: integer 
+	Parameter C_S_PHASE_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_PHASE_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_PHASE_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_S_CONFIG bound to: 1 - type: integer 
+	Parameter C_S_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_S_CONFIG_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_HAS_M_DATA bound to: 1 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_M_PHASE bound to: 0 - type: integer 
+	Parameter C_M_PHASE_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_PHASE_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_PHASE_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_CHAN_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'dds_compiler_v6_0_22' declared at 'c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_dds_compiler_v6_0_i0/hdl/dds_compiler_v6_0_vh_rfs.vhd:47308' bound to instance 'U0' of component 'dds_compiler_v6_0_22' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_dds_compiler_v6_0_i0/synth/configurablereceiver_dds_compiler_v6_0_i0.vhd:177]
+INFO: [Synth 8-256] done synthesizing module 'configurablereceiver_dds_compiler_v6_0_i0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_dds_compiler_v6_0_i0/synth/configurablereceiver_dds_compiler_v6_0_i0.vhd:70]
+INFO: [Synth 8-6155] done synthesizing module 'xldds_compiler_c21522467d2c52044e742341270d1e2b' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:654]
+INFO: [Synth 8-6157] synthesizing module 'configurablereceiver_xldelay' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:95]
+INFO: [Synth 8-6157] synthesizing module 'synth_reg' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:94]
+INFO: [Synth 8-6157] synthesizing module 'srlc33e' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:60]
+INFO: [Synth 8-6157] synthesizing module 'FDE' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:27737]
+INFO: [Synth 8-6155] done synthesizing module 'FDE' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:27737]
+INFO: [Synth 8-6155] done synthesizing module 'srlc33e' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'synth_reg' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'configurablereceiver_xldelay' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:95]
+INFO: [Synth 8-6157] synthesizing module 'configurablereceiver_xldelay__parameterized0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:95]
+INFO: [Synth 8-6157] synthesizing module 'synth_reg__parameterized0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:94]
+INFO: [Synth 8-6157] synthesizing module 'srlc33e__parameterized0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:60]
+INFO: [Synth 8-6157] synthesizing module 'SRLC32E' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:106148]
+INFO: [Synth 8-6155] done synthesizing module 'SRLC32E' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:106148]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7071] port 'Q31' of module 'SRLC32E' is unconnected for instance 'u1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+WARNING: [Synth 8-7023] instance 'u1' of module 'SRLC32E' has 6 connections declared, but only 5 given [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:76]
+INFO: [Synth 8-6155] done synthesizing module 'srlc33e__parameterized0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'synth_reg__parameterized0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'configurablereceiver_xldelay__parameterized0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:95]
+INFO: [Synth 8-6157] synthesizing module 'xlfir_compiler_1ce0cc7063059ff759972b735a988c77' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:682]
+INFO: [Synth 8-638] synthesizing module 'configurablereceiver_fir_compiler_v7_2_i0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i0/synth/configurablereceiver_fir_compiler_v7_2_i0.vhd:71]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_COMPONENT_NAME bound to: configurablereceiver_fir_compiler_v7_2_i0 - type: string 
+	Parameter C_COEF_FILE bound to: configurablereceiver_fir_compiler_v7_2_i0.mif - type: string 
+	Parameter C_COEF_FILE_LINES bound to: 3 - type: integer 
+	Parameter C_FILTER_TYPE bound to: 7 - type: integer 
+	Parameter C_INTERP_RATE bound to: 1 - type: integer 
+	Parameter C_DECIM_RATE bound to: 2 - type: integer 
+	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
+	Parameter C_SYMMETRY bound to: 1 - type: integer 
+	Parameter C_NUM_FILTS bound to: 1 - type: integer 
+	Parameter C_NUM_TAPS bound to: 7 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
+	Parameter C_ROUND_MODE bound to: 1 - type: integer 
+	Parameter C_COEF_RELOAD bound to: 0 - type: integer 
+	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
+	Parameter C_COL_MODE bound to: 1 - type: integer 
+	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
+	Parameter C_COL_CONFIG bound to: 1 - type: string 
+	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_DATA_PATH_WIDTHS bound to: 22 - type: string 
+	Parameter C_DATA_IP_PATH_WIDTHS bound to: 22 - type: string 
+	Parameter C_DATA_PX_PATH_WIDTHS bound to: 22 - type: string 
+	Parameter C_DATA_WIDTH bound to: 22 - type: integer 
+	Parameter C_COEF_PATH_WIDTHS bound to: 17 - type: string 
+	Parameter C_COEF_WIDTH bound to: 17 - type: integer 
+	Parameter C_DATA_PATH_SRC bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SRC bound to: 0 - type: string 
+	Parameter C_PX_PATH_SRC bound to: 0 - type: string 
+	Parameter C_DATA_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 39 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 22 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 22 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 39 - type: string 
+	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
+	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_NUM_MADDS bound to: 1 - type: integer 
+	Parameter C_OPT_MADDS bound to: none - type: string 
+	Parameter C_OVERSAMPLING_RATE bound to: 3 - type: integer 
+	Parameter C_INPUT_RATE bound to: 40 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 80 - type: integer 
+	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_COEF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_IPBUFF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_OPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_DATAPATH_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_MEM_ARRANGEMENT bound to: 1 - type: integer 
+	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 90 - type: integer 
+	Parameter C_HAS_ARESETn bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_FIFO bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_DATA_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_S_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_CONFIG_CHANNEL bound to: 0 - type: integer 
+	Parameter C_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_CONFIG_PACKET_SIZE bound to: 0 - type: integer 
+	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'fir_compiler_v7_2_18' declared at 'c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i3/hdl/fir_compiler_v7_2_vh_rfs.vhd:67113' bound to instance 'U0' of component 'fir_compiler_v7_2_18' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i0/synth/configurablereceiver_fir_compiler_v7_2_i0.vhd:201]
+INFO: [Synth 8-256] done synthesizing module 'configurablereceiver_fir_compiler_v7_2_i0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i0/synth/configurablereceiver_fir_compiler_v7_2_i0.vhd:71]
+INFO: [Synth 8-6155] done synthesizing module 'xlfir_compiler_1ce0cc7063059ff759972b735a988c77' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:682]
+INFO: [Synth 8-6157] synthesizing module 'xlfir_compiler_2cae4a1e44e7154a7961b11acb3c7a5d' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:759]
+INFO: [Synth 8-638] synthesizing module 'configurablereceiver_fir_compiler_v7_2_i1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i1/synth/configurablereceiver_fir_compiler_v7_2_i1.vhd:71]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_COMPONENT_NAME bound to: configurablereceiver_fir_compiler_v7_2_i1 - type: string 
+	Parameter C_COEF_FILE bound to: configurablereceiver_fir_compiler_v7_2_i1.mif - type: string 
+	Parameter C_COEF_FILE_LINES bound to: 6 - type: integer 
+	Parameter C_FILTER_TYPE bound to: 7 - type: integer 
+	Parameter C_INTERP_RATE bound to: 1 - type: integer 
+	Parameter C_DECIM_RATE bound to: 2 - type: integer 
+	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
+	Parameter C_SYMMETRY bound to: 1 - type: integer 
+	Parameter C_NUM_FILTS bound to: 1 - type: integer 
+	Parameter C_NUM_TAPS bound to: 19 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
+	Parameter C_ROUND_MODE bound to: 1 - type: integer 
+	Parameter C_COEF_RELOAD bound to: 0 - type: integer 
+	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
+	Parameter C_COL_MODE bound to: 1 - type: integer 
+	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
+	Parameter C_COL_CONFIG bound to: 1 - type: string 
+	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_DATA_PATH_WIDTHS bound to: 22 - type: string 
+	Parameter C_DATA_IP_PATH_WIDTHS bound to: 22 - type: string 
+	Parameter C_DATA_PX_PATH_WIDTHS bound to: 22 - type: string 
+	Parameter C_DATA_WIDTH bound to: 22 - type: integer 
+	Parameter C_COEF_PATH_WIDTHS bound to: 17 - type: string 
+	Parameter C_COEF_WIDTH bound to: 17 - type: integer 
+	Parameter C_DATA_PATH_SRC bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SRC bound to: 0 - type: string 
+	Parameter C_PX_PATH_SRC bound to: 0 - type: string 
+	Parameter C_DATA_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 39 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 22 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 22 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 39 - type: string 
+	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
+	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_NUM_MADDS bound to: 1 - type: integer 
+	Parameter C_OPT_MADDS bound to: none - type: string 
+	Parameter C_OVERSAMPLING_RATE bound to: 6 - type: integer 
+	Parameter C_INPUT_RATE bound to: 80 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 160 - type: integer 
+	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_COEF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_IPBUFF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_OPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_DATAPATH_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_MEM_ARRANGEMENT bound to: 1 - type: integer 
+	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 170 - type: integer 
+	Parameter C_HAS_ARESETn bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_FIFO bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_DATA_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_S_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_CONFIG_CHANNEL bound to: 0 - type: integer 
+	Parameter C_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_CONFIG_PACKET_SIZE bound to: 0 - type: integer 
+	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'fir_compiler_v7_2_18' declared at 'c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i3/hdl/fir_compiler_v7_2_vh_rfs.vhd:67113' bound to instance 'U0' of component 'fir_compiler_v7_2_18' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i1/synth/configurablereceiver_fir_compiler_v7_2_i1.vhd:201]
+INFO: [Synth 8-256] done synthesizing module 'configurablereceiver_fir_compiler_v7_2_i1' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i1/synth/configurablereceiver_fir_compiler_v7_2_i1.vhd:71]
+INFO: [Synth 8-6155] done synthesizing module 'xlfir_compiler_2cae4a1e44e7154a7961b11acb3c7a5d' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:759]
+INFO: [Synth 8-6157] synthesizing module 'xlfir_compiler_e9603a42db56575569569903f448b707' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:836]
+INFO: [Synth 8-6157] synthesizing module 'synth_reg_w_init__parameterized1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg_w_init.v:3]
+INFO: [Synth 8-6157] synthesizing module 'single_reg_w_init__parameterized1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg_w_init.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'single_reg_w_init__parameterized1' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg_w_init.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'synth_reg_w_init__parameterized1' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/synth_reg_w_init.v:3]
+INFO: [Synth 8-638] synthesizing module 'configurablereceiver_fir_compiler_v7_2_i2' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i2/synth/configurablereceiver_fir_compiler_v7_2_i2.vhd:71]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_COMPONENT_NAME bound to: configurablereceiver_fir_compiler_v7_2_i2 - type: string 
+	Parameter C_COEF_FILE bound to: configurablereceiver_fir_compiler_v7_2_i2.mif - type: string 
+	Parameter C_COEF_FILE_LINES bound to: 39 - type: integer 
+	Parameter C_FILTER_TYPE bound to: 0 - type: integer 
+	Parameter C_INTERP_RATE bound to: 1 - type: integer 
+	Parameter C_DECIM_RATE bound to: 1 - type: integer 
+	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
+	Parameter C_SYMMETRY bound to: 1 - type: integer 
+	Parameter C_NUM_FILTS bound to: 1 - type: integer 
+	Parameter C_NUM_TAPS bound to: 78 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
+	Parameter C_ROUND_MODE bound to: 1 - type: integer 
+	Parameter C_COEF_RELOAD bound to: 0 - type: integer 
+	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
+	Parameter C_COL_MODE bound to: 1 - type: integer 
+	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
+	Parameter C_COL_CONFIG bound to: 1 - type: string 
+	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_DATA_PATH_WIDTHS bound to: 22 - type: string 
+	Parameter C_DATA_IP_PATH_WIDTHS bound to: 22 - type: string 
+	Parameter C_DATA_PX_PATH_WIDTHS bound to: 22 - type: string 
+	Parameter C_DATA_WIDTH bound to: 22 - type: integer 
+	Parameter C_COEF_PATH_WIDTHS bound to: 17 - type: string 
+	Parameter C_COEF_WIDTH bound to: 17 - type: integer 
+	Parameter C_DATA_PATH_SRC bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SRC bound to: 0 - type: string 
+	Parameter C_PX_PATH_SRC bound to: 0 - type: string 
+	Parameter C_DATA_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 40 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 40 - type: string 
+	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
+	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_NUM_MADDS bound to: 1 - type: integer 
+	Parameter C_OPT_MADDS bound to: none - type: string 
+	Parameter C_OVERSAMPLING_RATE bound to: 39 - type: integer 
+	Parameter C_INPUT_RATE bound to: 160 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 160 - type: integer 
+	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_COEF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_IPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_OPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_DATAPATH_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_MEM_ARRANGEMENT bound to: 1 - type: integer 
+	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 46 - type: integer 
+	Parameter C_HAS_ARESETn bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_FIFO bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_DATA_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_S_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_CONFIG_CHANNEL bound to: 0 - type: integer 
+	Parameter C_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_CONFIG_PACKET_SIZE bound to: 0 - type: integer 
+	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'fir_compiler_v7_2_18' declared at 'c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i3/hdl/fir_compiler_v7_2_vh_rfs.vhd:67113' bound to instance 'U0' of component 'fir_compiler_v7_2_18' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i2/synth/configurablereceiver_fir_compiler_v7_2_i2.vhd:201]
+INFO: [Synth 8-256] done synthesizing module 'configurablereceiver_fir_compiler_v7_2_i2' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i2/synth/configurablereceiver_fir_compiler_v7_2_i2.vhd:71]
+INFO: [Synth 8-6155] done synthesizing module 'xlfir_compiler_e9603a42db56575569569903f448b707' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:836]
+INFO: [Synth 8-6157] synthesizing module 'xlfir_compiler_2fe82ac61a9213af9441e9e02b8aadbc' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:911]
+INFO: [Synth 8-638] synthesizing module 'configurablereceiver_fir_compiler_v7_2_i3' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i3/synth/configurablereceiver_fir_compiler_v7_2_i3.vhd:71]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_COMPONENT_NAME bound to: configurablereceiver_fir_compiler_v7_2_i3 - type: string 
+	Parameter C_COEF_FILE bound to: configurablereceiver_fir_compiler_v7_2_i3.mif - type: string 
+	Parameter C_COEF_FILE_LINES bound to: 3 - type: integer 
+	Parameter C_FILTER_TYPE bound to: 0 - type: integer 
+	Parameter C_INTERP_RATE bound to: 1 - type: integer 
+	Parameter C_DECIM_RATE bound to: 1 - type: integer 
+	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
+	Parameter C_SYMMETRY bound to: 1 - type: integer 
+	Parameter C_NUM_FILTS bound to: 1 - type: integer 
+	Parameter C_NUM_TAPS bound to: 6 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
+	Parameter C_ROUND_MODE bound to: 1 - type: integer 
+	Parameter C_COEF_RELOAD bound to: 0 - type: integer 
+	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
+	Parameter C_COL_MODE bound to: 1 - type: integer 
+	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
+	Parameter C_COL_CONFIG bound to: 3 - type: string 
+	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_DATA_PATH_WIDTHS bound to: 22 - type: string 
+	Parameter C_DATA_IP_PATH_WIDTHS bound to: 22 - type: string 
+	Parameter C_DATA_PX_PATH_WIDTHS bound to: 22 - type: string 
+	Parameter C_DATA_WIDTH bound to: 22 - type: integer 
+	Parameter C_COEF_PATH_WIDTHS bound to: 17 - type: string 
+	Parameter C_COEF_WIDTH bound to: 17 - type: integer 
+	Parameter C_DATA_PATH_SRC bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SRC bound to: 0 - type: string 
+	Parameter C_PX_PATH_SRC bound to: 0 - type: string 
+	Parameter C_DATA_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SIGN bound to: 1 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 36 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 22 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 22 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 36 - type: string 
+	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
+	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_NUM_MADDS bound to: 3 - type: integer 
+	Parameter C_OPT_MADDS bound to: none - type: string 
+	Parameter C_OVERSAMPLING_RATE bound to: 1 - type: integer 
+	Parameter C_INPUT_RATE bound to: 1 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 1 - type: integer 
+	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_COEF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_IPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_OPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_DATAPATH_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_MEM_ARRANGEMENT bound to: 1 - type: integer 
+	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 9 - type: integer 
+	Parameter C_HAS_ARESETn bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_FIFO bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_DATA_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_S_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_CONFIG_CHANNEL bound to: 0 - type: integer 
+	Parameter C_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_CONFIG_PACKET_SIZE bound to: 0 - type: integer 
+	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'fir_compiler_v7_2_18' declared at 'c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i3/hdl/fir_compiler_v7_2_vh_rfs.vhd:67113' bound to instance 'U0' of component 'fir_compiler_v7_2_18' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i3/synth/configurablereceiver_fir_compiler_v7_2_i3.vhd:201]
+INFO: [Synth 8-256] done synthesizing module 'configurablereceiver_fir_compiler_v7_2_i3' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i3/synth/configurablereceiver_fir_compiler_v7_2_i3.vhd:71]
+INFO: [Synth 8-6155] done synthesizing module 'xlfir_compiler_2fe82ac61a9213af9441e9e02b8aadbc' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:911]
+INFO: [Synth 8-6157] synthesizing module 'configurablereceiver_xlmult' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:942]
+INFO: [Synth 8-638] synthesizing module 'configurablereceiver_mult_gen_v12_0_i0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_mult_gen_v12_0_i0/synth/configurablereceiver_mult_gen_v12_0_i0.vhd:70]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_mult_gen_v12_0_i0/synth/configurablereceiver_mult_gen_v12_0_i0.vhd:73]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_mult_gen_v12_0_i0/synth/configurablereceiver_mult_gen_v12_0_i0.vhd:73]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_SCLR bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_A_WIDTH bound to: 16 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_WIDTH bound to: 16 - type: integer 
+	Parameter C_B_TYPE bound to: 0 - type: integer 
+	Parameter C_OUT_HIGH bound to: 31 - type: integer 
+	Parameter C_OUT_LOW bound to: 0 - type: integer 
+	Parameter C_MULT_TYPE bound to: 1 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 1 - type: integer 
+	Parameter C_CCM_IMP bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 10000001 - type: string 
+	Parameter C_HAS_ZERO_DETECT bound to: 0 - type: integer 
+	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
+	Parameter C_ROUND_PT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_18' declared at 'c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_mult_gen_v12_0_i0/hdl/mult_gen_v12_0_vh_rfs.vhd:21010' bound to instance 'U0' of component 'mult_gen_v12_0_18' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_mult_gen_v12_0_i0/synth/configurablereceiver_mult_gen_v12_0_i0.vhd:127]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-256] done synthesizing module 'configurablereceiver_mult_gen_v12_0_i0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_mult_gen_v12_0_i0/synth/configurablereceiver_mult_gen_v12_0_i0.vhd:70]
+INFO: [Synth 8-6157] synthesizing module 'zero_ext' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:186]
+INFO: [Synth 8-6155] done synthesizing module 'zero_ext' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:186]
+INFO: [Synth 8-6157] synthesizing module 'convert_type__parameterized0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:775]
+INFO: [Synth 8-6157] synthesizing module 'trunc__parameterized0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:539]
+INFO: [Synth 8-6155] done synthesizing module 'trunc__parameterized0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:539]
+INFO: [Synth 8-6157] synthesizing module 'wrap_arith__parameterized0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:754]
+INFO: [Synth 8-6157] synthesizing module 'cast__parameterized1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'cast__parameterized1' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'wrap_arith__parameterized0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:754]
+INFO: [Synth 8-6157] synthesizing module 'cast__parameterized2' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'cast__parameterized2' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'convert_type__parameterized0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/convert_type.v:775]
+INFO: [Synth 8-6155] done synthesizing module 'configurablereceiver_xlmult' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:942]
+INFO: [Synth 8-6157] synthesizing module 'sysgen_mux_bbb10d681f' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:125]
+INFO: [Synth 8-6155] done synthesizing module 'sysgen_mux_bbb10d681f' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:125]
+INFO: [Synth 8-6157] synthesizing module 'sysgen_reinterpret_0c17eb7a07' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:190]
+INFO: [Synth 8-6155] done synthesizing module 'sysgen_reinterpret_0c17eb7a07' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:190]
+INFO: [Synth 8-6157] synthesizing module 'sysgen_reinterpret_db558597d1' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:201]
+INFO: [Synth 8-6155] done synthesizing module 'sysgen_reinterpret_db558597d1' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:201]
+INFO: [Synth 8-6157] synthesizing module 'sysgen_relational_15ac3c59ec' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:212]
+INFO: [Synth 8-6155] done synthesizing module 'sysgen_relational_15ac3c59ec' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:212]
+INFO: [Synth 8-6157] synthesizing module 'sysgen_relational_1862dcc8b0' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:248]
+INFO: [Synth 8-6155] done synthesizing module 'sysgen_relational_1862dcc8b0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:248]
+INFO: [Synth 8-6157] synthesizing module 'sysgen_shift_edc95a5834' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:284]
+INFO: [Synth 8-6155] done synthesizing module 'sysgen_shift_edc95a5834' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:284]
+INFO: [Synth 8-6157] synthesizing module 'sysgen_shift_c8c012aecc' [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:320]
+INFO: [Synth 8-6155] done synthesizing module 'sysgen_shift_c8c012aecc' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver_entity_declarations.v:320]
+INFO: [Synth 8-6155] done synthesizing module 'configurablereceiver_struct' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'configurablereceiver' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/configurablereceiver.v:618]
+INFO: [Synth 8-6155] done synthesizing module 'configurablereceiver_0' (0#1) [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/synth/configurablereceiver_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element clk_num_reg was removed.  [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/work/hdl/xlclockdriver_rd.v:79]
+WARNING: [Synth 8-5858] RAM p_path_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  p_path_out_reg 
+WARNING: [Synth 8-5858] RAM p_path_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  p_path_out_reg 
+WARNING: [Synth 8-5858] RAM p_path_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  p_path_out_reg 
+WARNING: [Synth 8-5858] RAM p_casc_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  p_casc_reg 
+WARNING: [Synth 8-5858] RAM p_path_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  p_path_out_reg 
+WARNING: [Synth 8-7129] Port ip[15] in module sysgen_shift_c8c012aecc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clr in module sysgen_shift_c8c012aecc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ip[21] in module sysgen_shift_edc95a5834 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clr in module sysgen_shift_edc95a5834 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clr in module sysgen_relational_1862dcc8b0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clr in module sysgen_relational_15ac3c59ec is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module sysgen_reinterpret_db558597d1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ce in module sysgen_reinterpret_db558597d1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clr in module sysgen_reinterpret_db558597d1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module sysgen_reinterpret_0c17eb7a07 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ce in module sysgen_reinterpret_0c17eb7a07 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clr in module sysgen_reinterpret_0c17eb7a07 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clr in module sysgen_mux_bbb10d681f is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inp[14] in module trunc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inp[13] in module trunc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inp[12] in module trunc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inp[11] in module trunc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inp[10] in module trunc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inp[9] in module trunc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inp[8] in module trunc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inp[7] in module trunc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inp[6] in module trunc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inp[5] in module trunc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inp[4] in module trunc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inp[3] in module trunc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inp[2] in module trunc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inp[1] in module trunc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inp[0] in module trunc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[47] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[46] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[45] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[44] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[43] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[42] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[41] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[40] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[39] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[38] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[37] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[36] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[35] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[34] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[33] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[32] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[31] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[30] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[29] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[28] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[27] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[26] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[25] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[24] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[23] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[22] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[21] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[20] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[19] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[18] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[17] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[16] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[15] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[14] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[13] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[12] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[11] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[10] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[9] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[8] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[7] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[6] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[5] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[4] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[3] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[2] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[1] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_PORT[0] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[24] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[23] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[22] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[21] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[20] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[19] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[18] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[17] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[16] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[15] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[14] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[13] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[12] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[11] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[10] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[9] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[8] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[7] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[6] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[5] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[4] in module dsp is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:37 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:38 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:38 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.369 . Memory (MB): peak = 2067.488 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2089 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i3/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_7/configurablereceiver_fir_compiler_v7_2_i3_instance/U0'
+Finished Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i3/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_7/configurablereceiver_fir_compiler_v7_2_i3_instance/U0'
+Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i3/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_8/configurablereceiver_fir_compiler_v7_2_i3_instance/U0'
+Finished Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i3/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_8/configurablereceiver_fir_compiler_v7_2_i3_instance/U0'
+Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i2/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_5/configurablereceiver_fir_compiler_v7_2_i2_instance/U0'
+Finished Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i2/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_5/configurablereceiver_fir_compiler_v7_2_i2_instance/U0'
+Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i2/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_6/configurablereceiver_fir_compiler_v7_2_i2_instance/U0'
+Finished Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i2/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_6/configurablereceiver_fir_compiler_v7_2_i2_instance/U0'
+Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i1/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_3/configurablereceiver_fir_compiler_v7_2_i1_instance/U0'
+Finished Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i1/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_3/configurablereceiver_fir_compiler_v7_2_i1_instance/U0'
+Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i1/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_4/configurablereceiver_fir_compiler_v7_2_i1_instance/U0'
+Finished Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i1/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_4/configurablereceiver_fir_compiler_v7_2_i1_instance/U0'
+Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i0/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_1/configurablereceiver_fir_compiler_v7_2_i0_instance/U0'
+Finished Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i0/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_1/configurablereceiver_fir_compiler_v7_2_i0_instance/U0'
+Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i0/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_2/configurablereceiver_fir_compiler_v7_2_i0_instance/U0'
+Finished Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/configurablereceiver_fir_compiler_v7_2_i0/constraints/fir_compiler_v7_2.xdc] for cell 'inst/configurablereceiver_struct/fir_compiler_7_2/configurablereceiver_fir_compiler_v7_2_i0_instance/U0'
+Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/constrs/configurablereceiver.xdc] for cell 'inst'
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/constrs/configurablereceiver.xdc:8]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/constrs/configurablereceiver.xdc:10]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/constrs/configurablereceiver.xdc:12]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/constrs/configurablereceiver.xdc:14]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/constrs/configurablereceiver.xdc:16]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/constrs/configurablereceiver.xdc:18]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/constrs/configurablereceiver.xdc:20]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/constrs/configurablereceiver.xdc:22]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/constrs/configurablereceiver.xdc:24]
+Finished Parsing XDC File [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/constrs/configurablereceiver.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/configurablereceiver_0/constrs/configurablereceiver.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/configurablereceiver_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/configurablereceiver_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/configurablereceiver_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/configurablereceiver_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2067.488 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 54 instances were transformed.
+  FDE => FDRE: 32 instances
+  FDRSE => FDRSE (FDRE, LUT4, VCC): 12 instances
+  MUXCY_L => MUXCY: 10 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.298 . Memory (MB): peak = 2067.488 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:48 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:48 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_1/configurablereceiver_fir_compiler_v7_2_i0_instance/U0. (constraint file  C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1/dont_touch.xdc, line 38).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_2/configurablereceiver_fir_compiler_v7_2_i0_instance/U0. (constraint file  C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1/dont_touch.xdc, line 38).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_3/configurablereceiver_fir_compiler_v7_2_i1_instance/U0. (constraint file  C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1/dont_touch.xdc, line 41).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_4/configurablereceiver_fir_compiler_v7_2_i1_instance/U0. (constraint file  C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1/dont_touch.xdc, line 41).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_5/configurablereceiver_fir_compiler_v7_2_i2_instance/U0. (constraint file  C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1/dont_touch.xdc, line 44).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_6/configurablereceiver_fir_compiler_v7_2_i2_instance/U0. (constraint file  C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1/dont_touch.xdc, line 44).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_7/configurablereceiver_fir_compiler_v7_2_i3_instance/U0. (constraint file  C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1/dont_touch.xdc, line 47).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_8/configurablereceiver_fir_compiler_v7_2_i3_instance/U0. (constraint file  C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1/dont_touch.xdc, line 47).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1/dont_touch.xdc, line 51).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/mult/\comp0.core_instance0 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/mult1/\comp0.core_instance0 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_7/configurablereceiver_fir_compiler_v7_2_i3_instance. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_8/configurablereceiver_fir_compiler_v7_2_i3_instance. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_5/configurablereceiver_fir_compiler_v7_2_i2_instance. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_6/configurablereceiver_fir_compiler_v7_2_i2_instance. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_3/configurablereceiver_fir_compiler_v7_2_i1_instance. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_4/configurablereceiver_fir_compiler_v7_2_i1_instance. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_1/configurablereceiver_fir_compiler_v7_2_i0_instance. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/fir_compiler_7_2/configurablereceiver_fir_compiler_v7_2_i0_instance. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/dds_compiler_6_0/configurablereceiver_dds_compiler_v6_0_i0_instance. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/cordic_6_0/configurablereceiver_cordic_v6_0_i0_instance. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/cic_compiler_4_0/configurablereceiver_cic_compiler_v4_0_i0_instance. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/cic_compiler_4_1/configurablereceiver_cic_compiler_v4_0_i0_instance. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/addsub1/\comp1.core_instance1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/configurablereceiver_struct/addsub/\comp0.core_instance0 . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:49 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6040] Register i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register i_rtl.i_quarter_table.i_has_cos.i_addr_mod_stage1.mod_cos_addr_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:51 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'configurablereceiver_cic_compiler_v4_0_i0:/U0/i_synth/decimator.decimation_filter/int/gen_stages[0].gen_unfolded.int_comb_stage/gen_split_accum[0].gen_mem_we' (cic_compiler_v4_0_16_delay_bit__parameterized0) to 'configurablereceiver_cic_compiler_v4_0_i0:/U0/i_synth/decimator.decimation_filter/int/gen_stages[0].gen_unfolded.int_comb_stage/gen_split_accum[1].gen_nd_src'
+INFO: [Synth 8-223] decloning instance 'configurablereceiver_cic_compiler_v4_0_i0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_en_dly' (cic_compiler_v4_0_16_delay_bit__parameterized0) to 'configurablereceiver_cic_compiler_v4_0_i0:/U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_mem_we'
+INFO: [Synth 8-223] decloning instance 'fir_compiler_v7_2_18:/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.g_cntrl_signals[4].i_delay' (fir_compiler_v7_2_18_delay__parameterized6) to 'fir_compiler_v7_2_18:/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.g_cntrl_signals[5].i_delay'
+INFO: [Synth 8-223] decloning instance 'fir_compiler_v7_2_18__parameterized1:/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.g_cntrl_signals[0].i_delay' (fir_compiler_v7_2_18_delay__parameterized5) to 'fir_compiler_v7_2_18__parameterized1:/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.g_cntrl_signals[1].i_delay'
+INFO: [Synth 8-223] decloning instance 'fir_compiler_v7_2_18__parameterized1:/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.g_cntrl_signals[4].i_delay' (fir_compiler_v7_2_18_delay__parameterized6) to 'fir_compiler_v7_2_18__parameterized1:/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.g_cntrl_signals[5].i_delay'
+INFO: [Synth 8-223] decloning instance 'fir_compiler_v7_2_18__parameterized3:/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[0].i_delay' (fir_compiler_v7_2_18_delay__parameterized26) to 'fir_compiler_v7_2_18__parameterized3:/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[1].i_delay'
+INFO: [Synth 8-223] decloning instance 'fir_compiler_v7_2_18__parameterized3:/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[4].i_delay' (fir_compiler_v7_2_18_delay__parameterized27) to 'fir_compiler_v7_2_18__parameterized3:/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[5].i_delay'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver_x2/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver_x1/pipelined_ce.ce_pipeline_logic[0].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver_x1/pipelined_ce.ce_pipeline_logic[1].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver_x1/pipelined_ce.ce_pipeline_logic[2].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver_x1/pipelined_ce.ce_pipeline_logic[3].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver_x1/pipelined_ce.ce_pipeline_logic[4].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver_x0/pipelined_ce.ce_pipeline_logic[0].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver_x0/pipelined_ce.ce_pipeline_logic[1].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver_x0/pipelined_ce.ce_pipeline_logic[2].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver_x0/pipelined_ce.ce_pipeline_logic[3].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver_x0/pipelined_ce.ce_pipeline_logic[4].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver/pipelined_ce.ce_pipeline_logic[0].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver/pipelined_ce.ce_pipeline_logic[1].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver/pipelined_ce.ce_pipeline_logic[2].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver/pipelined_ce.ce_pipeline_logic[3].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_default_clock_driver/clockdriver/pipelined_ce.ce_pipeline_logic[4].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/cic_compiler_4_0/m_axis_data_tvalid_ps_net_synchronizer_1/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/cic_compiler_4_0/m_axis_data_tvalid_ps_net_synchronizer_2/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/cic_compiler_4_1/m_axis_data_tvalid_ps_net_synchronizer_1/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/cic_compiler_4_1/m_axis_data_tvalid_ps_net_synchronizer_2/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_1/m_axis_data_tdata_real_ps_net_synchronizer/has_latency.fd_array[1].reg_comp_1/fd_prim_array[21].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_1/m_axis_data_tvalid_ps_net_synchronizer_1/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_1/m_axis_data_tvalid_ps_net_synchronizer_2/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_2/m_axis_data_tdata_real_ps_net_synchronizer/has_latency.fd_array[1].reg_comp_1/fd_prim_array[21].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_2/m_axis_data_tvalid_ps_net_synchronizer_1/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_2/m_axis_data_tvalid_ps_net_synchronizer_2/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_3/m_axis_data_tdata_real_ps_net_synchronizer/has_latency.fd_array[1].reg_comp_1/fd_prim_array[21].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_3/m_axis_data_tvalid_ps_net_synchronizer_1/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_3/m_axis_data_tvalid_ps_net_synchronizer_2/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_4/m_axis_data_tdata_real_ps_net_synchronizer/has_latency.fd_array[1].reg_comp_1/fd_prim_array[21].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_4/m_axis_data_tvalid_ps_net_synchronizer_1/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_4/m_axis_data_tvalid_ps_net_synchronizer_2/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_5/m_axis_data_tdata_real_ps_net_synchronizer/has_latency.fd_array[1].reg_comp_1/fd_prim_array[15].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_6/m_axis_data_tdata_real_ps_net_synchronizer/has_latency.fd_array[1].reg_comp_1/fd_prim_array[15].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_6/m_axis_data_tvalid_ps_net_synchronizer_1/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+WARNING: [Synth 8-3332] Sequential element (configurablereceiver_struct/fir_compiler_7_6/m_axis_data_tvalid_ps_net_synchronizer_2/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module configurablereceiver.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:56 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:01:04 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:01:04 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5591] srl_style attribute value srl_reg on inst/configurablereceiver_struct/fir_compiler_7_1/configurablereceiver_fir_compiler_v7_2_i0_instance/U0/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.i_cntrl_src/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[0][1] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value srl_reg on inst/configurablereceiver_struct/fir_compiler_7_1/configurablereceiver_fir_compiler_v7_2_i0_instance/U0/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.i_cntrl_src/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][1] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value srl_reg on inst/configurablereceiver_struct/fir_compiler_7_2/configurablereceiver_fir_compiler_v7_2_i0_instance/U0/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.i_cntrl_src/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[0][1] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value srl_reg on inst/configurablereceiver_struct/fir_compiler_7_2/configurablereceiver_fir_compiler_v7_2_i0_instance/U0/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.i_cntrl_src/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][1] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value srl_reg on inst/configurablereceiver_struct/fir_compiler_7_3/configurablereceiver_fir_compiler_v7_2_i1_instance/U0/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.i_cntrl_src/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][2] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value srl_reg on inst/configurablereceiver_struct/fir_compiler_7_4/configurablereceiver_fir_compiler_v7_2_i1_instance/U0/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.i_cntrl_src/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][2] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value srl_reg on inst/configurablereceiver_struct/fir_compiler_7_1/configurablereceiver_fir_compiler_v7_2_i0_instance/U0/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.i_cntrl_src/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[0][1] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value srl_reg on inst/configurablereceiver_struct/fir_compiler_7_1/configurablereceiver_fir_compiler_v7_2_i0_instance/U0/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.i_cntrl_src/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][1] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value srl_reg on inst/configurablereceiver_struct/fir_compiler_7_2/configurablereceiver_fir_compiler_v7_2_i0_instance/U0/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.i_cntrl_src/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[0][1] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value srl_reg on inst/configurablereceiver_struct/fir_compiler_7_2/configurablereceiver_fir_compiler_v7_2_i0_instance/U0/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.i_cntrl_src/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][1] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value srl_reg on inst/configurablereceiver_struct/fir_compiler_7_3/configurablereceiver_fir_compiler_v7_2_i1_instance/U0/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.i_cntrl_src/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][2] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value srl_reg on inst/configurablereceiver_struct/fir_compiler_7_4/configurablereceiver_fir_compiler_v7_2_i1_instance/U0/i_synth/g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.i_cntrl_src/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][2] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:01:06 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:01:09 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:01:09 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:01:10 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:01:10 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:01:10 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:01:10 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-----------------------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                  | DSP Mapping            | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|emb_calc__parameterized5_445 | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|emb_calc_433                 | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|emb_calc_429                 | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|emb_calc__parameterized1_427 | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|emb_calc__parameterized2_425 | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|emb_calc__parameterized3_423 | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|emb_calc__parameterized4_421 | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|emb_calc__parameterized5     | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|emb_calc_402                 | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|emb_calc                     | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|emb_calc__parameterized1     | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|emb_calc__parameterized2     | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|emb_calc__parameterized3     | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|emb_calc__parameterized4     | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|calc_110                     | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | 1     | 1    | 1    | 
+|calc_92                      | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | 1     | 1    | 1    | 
+|calc_79                      | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | 1     | 1    | 1    | 
+|calc                         | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | 1     | 1    | 1    | 
+|calc__parameterized0_58      | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | 1     | 1    | 1    | 
+|calc__parameterized0         | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | 1     | 1    | 1    | 
+|calc__parameterized1_31      | (PCIN+((D'+A')'*B')')' | 30     | 10     | -      | 25     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc__parameterized1_30      | (PCIN+((D'+A')'*B')')' | 30     | 12     | -      | 25     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc__parameterized1_29      | (C'+((D'+A')'*B')')'   | 30     | 13     | 0      | 25     | 48     | 1    | 1    | 1    | 1    | 1     | 1    | 1    | 
+|calc__parameterized1_11      | (PCIN+((D'+A')'*B')')' | 30     | 10     | -      | 25     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc__parameterized1_10      | (PCIN+((D'+A')'*B')')' | 30     | 12     | -      | 25     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc__parameterized1         | (C'+((D'+A')'*B')')'   | 30     | 13     | 0      | 25     | 48     | 1    | 1    | 1    | 1    | 1     | 1    | 1    | 
+|dsp                          | ((A'*B')')'            | 30     | 18     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp                          | ((A'*B')')'            | 30     | 18     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 1    | 
++-----------------------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    11|
+|2     |DSP48E1  |    28|
+|5     |LUT1     |   131|
+|6     |LUT2     |   605|
+|7     |LUT3     |   899|
+|8     |LUT4     |   112|
+|9     |LUT5     |    44|
+|10    |LUT6     |   103|
+|11    |MUXCY    |   906|
+|12    |MUXCY_L  |    10|
+|13    |MUXF7    |    84|
+|14    |RAM16X1D |   172|
+|15    |RAMB18E1 |     1|
+|16    |RAMB36E1 |     7|
+|23    |SRL16E   |   510|
+|24    |SRLC32E  |   184|
+|25    |XORCY    |   902|
+|26    |FDE      |    32|
+|27    |FDRE     |  3980|
+|28    |FDSE     |    16|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:01:10 . Memory (MB): peak = 2067.488 ; gain = 442.844
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 528 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:01:04 . Memory (MB): peak = 2067.488 ; gain = 442.844
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:01:10 . Memory (MB): peak = 2067.488 ; gain = 442.844
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.183 . Memory (MB): peak = 2067.488 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2153 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2067.488 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 448 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 244 instances
+  FDE => FDRE: 32 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 172 instances
+
+Synth Design complete, checksum: a3ff25ab
+INFO: [Common 17-83] Releasing license: Synthesis
+185 Infos, 234 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:01:17 . Memory (MB): peak = 2067.488 ; gain = 442.844
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Common 17-1381] The checkpoint 'C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1/configurablereceiver_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP configurablereceiver_0, cache-ID = e9081178e7fa5976
+INFO: [Coretcl 2-1174] Renamed 796 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.runs/configurablereceiver_0_synth_1/configurablereceiver_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file configurablereceiver_0_utilization_synth.rpt -pb configurablereceiver_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Aug  1 17:24:32 2023...
