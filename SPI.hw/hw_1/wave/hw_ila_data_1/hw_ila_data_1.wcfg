@@ -9,26 +9,32 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="10,494"></ZoomStartTime>
-      <ZoomEndTime time="14,524"></ZoomEndTime>
-      <Cursor1Time time="11,819"></Cursor1Time>
+      <ZoomStartTime time="0"></ZoomStartTime>
+      <ZoomEndTime time="10"></ZoomEndTime>
+      <Cursor1Time time="0"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="198"></NameColumnWidth>
+      <NameColumnWidth column_width="190"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="1" />
+   <WVObjectSize size="2" />
    <wave_markers>
       <marker time="11352" label="" />
       <marker time="19776" label="" />
    </wave_markers>
-   <wvobject fp_name="adc_in_IBUF" type="array">
+   <wvobject fp_name="dds1/phase0" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">adc_in_IBUF[14:0]</obj_property>
-      <obj_property name="ObjectShortName">adc_in_IBUF[14:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="ElementShortName">dds1/phase0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">phase0[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="dds1/phase0_valid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dds1/phase0_valid</obj_property>
+      <obj_property name="ObjectShortName">phase0_valid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
 </wave_config>

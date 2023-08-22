@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k70tfbg484-2" LaunchTime="1691071579" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/SPIMaster.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7k70tfbg484-2" LaunchTime="1692717471" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/SPIMaster.dcp">
   <File Type="PA-TCL" Name="SignalSplitter.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="SignalSplitter_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="SignalSplitter_reports.tcl"/>
@@ -73,13 +73,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/ip/SignalSplitter_ila/SignalSplitter_ila.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="SignalSplitter"/>
@@ -118,4 +111,6 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="fifo_generator_0"/>
   <BlockFileSet Type="BlockSrcs" Name="rom_sine"/>
+  <BlockFileSet Type="BlockSrcs" Name="RegisterModule_ila"/>
+  <BlockFileSet Type="BlockSrcs" Name="DDS_ila"/>
 </GenRun>

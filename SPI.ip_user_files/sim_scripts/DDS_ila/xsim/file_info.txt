@@ -1,0 +1,2 @@
+DDS_ila.v,verilog,xil_defaultlib,../../../../SPI.gen/sources_1/ip/DDS_ila/sim/DDS_ila.v,incdir="../../../../SPI.gen/sources_1/ip/DDS_ila/hdl/verilog"
+glbl.v,Verilog,xil_defaultlib,glbl.v

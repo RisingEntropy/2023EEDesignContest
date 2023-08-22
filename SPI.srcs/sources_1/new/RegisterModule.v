@@ -50,10 +50,10 @@ module RegisterModule(
     parameter STATE_RECEIVING_COMMAND = 3'b001;
     parameter STATE_RECEIVING_DATA = 3'b010;
     parameter STATE_FINISH = 3'b011;
-    parameter REGISTER_AMUNT = 10;
+    parameter REGISTER_AMUNT = 16;
     
     reg[15:0] registers[REGISTER_AMUNT-1:0];
-    reg[REGISTER_AMUNT-1:0] register_state = 10'b1111111111;
+    reg[REGISTER_AMUNT-1:0] register_state = 16'b1111_1111_1111_1111;
     
     assign register_reset_period_state = register_state[0]&register_state[1];
     assign register_reset_period = {registers[0],registers[1]};
@@ -68,10 +68,10 @@ module RegisterModule(
     assign register_DDS_function_sel = registers[8];
     
     assign register_ch1_phase0_state = register_state[9]&register_state[10];
-    assign register_ch1_phase0 = {registers[9]&registers[10]};
+    assign register_ch1_phase0 = {registers[9],registers[10]};
     
     assign register_ch2_phase0_state = register_state[11]&register_state[12];
-    assign register_ch2_phase0 = {registers[11]&registers[12]};
+    assign register_ch2_phase0 = {registers[11],registers[12]};
     
     reg[2:0] current_state = STATE_IDLE;
     reg spi_clear_ready_flag = 0;
@@ -81,7 +81,13 @@ module RegisterModule(
     reg[5:0] delay_counter = 0;
     reg[1:0] busy_edge;
     
-    
+//    RegisterModule_ila ila(
+//        .clk(clk),
+//        .probe0(register_ch1_phase0_state),
+//        .probe1(register_ch1_phase0),
+//        .probe2(register_ch2_phase0_state),
+//        .probe3(register_ch2_phase0)
+//    );
 
     SPISlaveReceive spi_receiver(
         .clk(clk),
@@ -104,7 +110,7 @@ module RegisterModule(
     always@(posedge clk)begin
         if(rstn==0)begin
             current_state <= STATE_IDLE;
-            register_state <= 10'b11_1111_1111;
+            register_state <= 16'b1111_1111_1111_1111;
             registers[0] <= 0;
             registers[1] <= 0;
             registers[2] <= 0;
@@ -115,6 +121,12 @@ module RegisterModule(
             registers[7] <= 0;
             registers[8] <= 0;
             registers[9] <= 0;
+            registers[10] <= 0;
+            registers[11] <= 0;
+            registers[12] <= 0;
+            registers[13] <= 0;
+            registers[14] <= 0;
+            registers[15] <= 0;
             delay_counter <= 0;
         end else begin
             case(current_state)

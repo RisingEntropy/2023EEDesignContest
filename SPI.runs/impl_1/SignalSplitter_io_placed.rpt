@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date                      : Thu Aug  3 22:08:04 2023
+| Date                      : Tue Aug 22 23:19:14 2023
 | Host                      : DESKTOP-3R96T2B running 64-bit major release  (build 9200)
 | Command                   : report_io -file SignalSplitter_io_placed.rpt
 | Design                    : SignalSplitter
@@ -117,8 +117,8 @@ Table of Contents
 | B14        |                   | High Range       | VCCO_15                      | VCCO          |             |      15 |            |      |                     |                      |      3.30 |            |           |          |      |                  |              |                   |              |
 | B15        | conf_cs           | High Range       | IO_L9P_T1_DQS_AD11P_15       | INPUT         | LVCMOS33    |      15 |            |      |                     |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |
 | B16        |                   | High Range       | IO_L8P_T1_AD3P_15            | User IO       |             |      15 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
-| B17        | conf_spi_clk      | High Range       | IO_L10P_T1_AD4P_15           | INPUT         | LVCMOS33    |      15 |            |      |                     |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |
-| B18        |                   | High Range       | IO_L20P_T3_A20_15            | User IO       |             |      15 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
+| B17        |                   | High Range       | IO_L10P_T1_AD4P_15           | User IO       |             |      15 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
+| B18        | conf_spi_clk      | High Range       | IO_L20P_T3_A20_15            | INPUT         | LVCMOS33    |      15 |            |      |                     |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |
 | B19        |                   |                  | GND                          | GND           |             |         |            |      |                     |                      |       0.0 |            |           |          |      |                  |              |                   |              |
 | B20        |                   | High Range       | IO_L24P_T3_RS1_15            | User IO       |             |      15 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
 | B21        |                   | High Range       | IO_L24N_T3_RS0_15            | User IO       |             |      15 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |

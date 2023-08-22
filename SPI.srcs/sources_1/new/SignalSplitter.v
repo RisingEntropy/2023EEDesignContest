@@ -18,11 +18,13 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
+//modification:
+//          decimate 40 -> decimate 10
+//          disable output when no signal detected
 
 module SignalSplitter(
         input wire clk,
-        input wire[15:0] adc_in,
+        input wire signed[15:0] adc_in,
         input wire rstn,
         input wire conf_cs,
         input wire conf_spi_clk,
@@ -39,7 +41,11 @@ module SignalSplitter(
     parameter STATE_COUNTING = 2'b00;
     parameter STATE_WAITING_FOR_JUMP = 2'b01;
     parameter STATE_RESET_DDS = 2'b10;
+    parameter SIGNAL_DETECT_LENGTH = 40_0000;
+    parameter SIGNAL_DETECT_THRESHOLD = 4000;
     reg[1:0] current_state = STATE_COUNTING;
+    reg signed[15:0] last_max = 0;
+    reg [24:0] signal_detect_counter = 0;
     
     wire register_reset_period_state;
     wire[31:0] register_reset_period;
@@ -58,19 +64,14 @@ module SignalSplitter(
 
     wire register_ch2_phase0_state;
     wire[31:0] register_ch2_phase0;
+    
     reg rst_phase = 0;
     reg [31:0] rst_phase_counter = 0;
     reg[1:0] adc_buffer = 0;
     reg[2:0] tick_wait = 0;
     wire[13:0] ch1_data;
     wire[13:0] ch2_data;
-
-    SignalSplitter_ila ila(
-        .clk(clk),
-        .probe0(adc_in),
-        .probe1(dac_ch1_data),
-        .probe2(dac_ch2_data)
-    );
+    reg do_output = 1;
     RegisterModule registers(
         .clk(clk),
         .spi_clk(conf_spi_clk),
@@ -93,8 +94,8 @@ module SignalSplitter(
         .register_ch1_phase0_state(register_ch1_phase0_state),
         .register_ch1_phase0(register_ch1_phase0),
         
-        .register_ch2_phase0_state(register_ch2_phase1_state),
-        .register_ch2_phase0(register_ch2_phase1)
+        .register_ch2_phase0_state(register_ch2_phase0_state),
+        .register_ch2_phase0(register_ch2_phase0)
         
     );
     
@@ -103,6 +104,7 @@ module SignalSplitter(
         .adc_in(adc_in),
         .rstn(rstn),
         .enable(adc_data_enable),
+        .rst_phase(rst_phase),
         .busy(adc_data_busy),
         .spi_clk(adc_data_spi_clk),
         .spi_mosi(adc_data_spi_mosi)
@@ -119,7 +121,8 @@ module SignalSplitter(
         .confg_state(register_DDS_function_sel_state),
         .confg(register_DDS_function_sel[15:8]),
         .dds_out(dac_ch1_data),
-        .dac_sleep(dac1_sleep)
+        .dac_sleep(dac1_sleep),
+        .do_output(do_output)
     );
     
     DDSModule dds2(
@@ -133,8 +136,11 @@ module SignalSplitter(
         .confg_state(register_DDS_function_sel_state),
         .confg(register_DDS_function_sel[7:0]),
         .dds_out(dac_ch2_data),
-        .dac_sleep(dac2_sleep)
+        .dac_sleep(dac2_sleep),
+        .do_output(do_output)
     );
+    
+    
     
     always@(posedge clk)begin
         if(rstn==0)begin
@@ -179,5 +185,22 @@ module SignalSplitter(
         end
     end
 
-
+    always@(posedge clk)begin
+        if(signal_detect_counter>=SIGNAL_DETECT_LENGTH-1)begin
+            signal_detect_counter <= 0;
+            last_max <= 0;
+            if(last_max < SIGNAL_DETECT_THRESHOLD)begin
+                do_output <= 0;
+            end else begin
+                do_output <= 1;
+            end
+        end else begin
+            signal_detect_counter <= signal_detect_counter+1;
+            if(last_max<adc_in)begin
+                last_max <= adc_in;
+            end else begin
+                last_max <= last_max;
+            end
+        end
+    end
 endmodule

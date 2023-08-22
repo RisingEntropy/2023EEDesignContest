@@ -70,9 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 5
-set_param xicom.use_bs_reader 1
 set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net stm32_clk_led_OBUF has multiple drivers: stm32_clk_led_reg/Q, and stm32_clk_led_reg__0/Q.}}  -suppress 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7k70tfbg484-2
@@ -107,18 +105,24 @@ read_verilog -library xil_defaultlib {
   C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/DecimatorBuffer.v
   C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/new/SignalSplitter.v
 }
-read_ip -quiet C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/ip/SignalSplitter_ila/SignalSplitter_ila.xci
-set_property used_in_synthesis false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/SignalSplitter_ila/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/SignalSplitter_ila/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/SignalSplitter_ila/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/SignalSplitter_ila/SignalSplitter_ila_ooc.xdc]
-
 read_ip -quiet C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_ooc.xdc]
 
 read_ip -quiet C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/ip/rom_sine/rom_sine.xci
 set_property used_in_implementation false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/rom_sine/rom_sine_ooc.xdc]
+
+read_ip -quiet C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/ip/RegisterModule_ila/RegisterModule_ila.xci
+set_property used_in_synthesis false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/RegisterModule_ila/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/RegisterModule_ila/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/RegisterModule_ila/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/RegisterModule_ila/RegisterModule_ila_ooc.xdc]
+
+read_ip -quiet C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/sources_1/ip/DDS_ila/DDS_ila.xci
+set_property used_in_synthesis false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/DDS_ila/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/DDS_ila/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/DDS_ila/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.gen/sources_1/ip/DDS_ila/DDS_ila_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -132,8 +136,6 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc
 set_property used_in_implementation false [get_files C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/constrs_1/new/constraints1.xdc]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental C:/Users/RisingEntropy/Documents/Projects/FPGA/SPI/SPI.srcs/utils_1/imports/synth_1/SPIMaster.dcp

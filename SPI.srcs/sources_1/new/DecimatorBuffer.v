@@ -25,6 +25,7 @@ module DecimatorBuffer(
         input wire[15:0] adc_in,
         input wire rstn,
         input wire enable,
+        input wire rst_phase,
         output reg busy = 0,
         output wire spi_clk,
         output wire spi_mosi
@@ -44,6 +45,7 @@ module DecimatorBuffer(
     reg[1:0] internal_enable = 2'b11;
     wire[11:0] data_count;
     reg[7:0] decimator_counter = 0;
+//    reg flag = 0;
     fifo_generator_0 fifo(
         .clk(clk),
         .srst(!rstn),
@@ -67,14 +69,17 @@ module DecimatorBuffer(
         .busy(spi_busy),
         .error(spi_error)
     );
-
-    always@(posedge clk)begin
-        internal_enable = {internal_enable[0],enable};
-    end
+    
+//    always@(posedge clk)begin
+//        internal_enable = {internal_enable[0],enable};
+//        if(internal_enable==2'b01)begin
+//            flag <= 1;
+//        end
+//    end
     always@(posedge clk)begin
         if(rstn==0)begin
             busy <= 0;
-        end else if(internal_enable==2'b01&&current_state==STATE_IDLE) begin
+        end else if(enable==1&&current_state==STATE_IDLE&&rst_phase==1) begin
             busy <= 1;
         end else if(current_state==STATE_FINISH)begin
             busy <= 0;
@@ -109,7 +114,7 @@ module DecimatorBuffer(
                         decimator_counter <= 0;
                     end else begin
                         current_state<= current_state;
-                        if(decimator_counter<39)begin
+                        if(decimator_counter<9)begin // decimate by 10 times
                             decimator_counter <= decimator_counter + 1;
                             fifo_wr_en <= 0;                            
                         end else begin

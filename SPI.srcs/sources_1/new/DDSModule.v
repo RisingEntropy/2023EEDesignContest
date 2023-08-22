@@ -30,6 +30,7 @@ module DDSModule(
         input wire[31:0] FTW,
         input wire confg_state,
         input wire[7:0] confg,
+        input wire do_output,
         output reg[13:0] dds_out,
         output reg dac_sleep = 0
     );
@@ -47,6 +48,12 @@ module DDSModule(
         .FTW_state(FTW_state),
         .dds_out(triangle_out)
     );
+    
+//    DDS_ila(
+//        .clk(clk),
+//        .probe0(phase0_valid),
+//        .probe1(phase0)
+//    );
     SineDDS sine(
         .clk(clk),
         .rstn(rstn),
@@ -64,7 +71,7 @@ module DDSModule(
             enable_triangle <= 0;
         end else begin
             if(confg_state==1)begin
-                if(confg[1:0]==2'b00)begin//disable output
+                if(confg[1:0]==2'b00||do_output==0)begin//disable output
                     dds_out <= 14'b00_0000_0000_0000;
                     enable_sin <= 0;
                     enable_triangle <= 0;

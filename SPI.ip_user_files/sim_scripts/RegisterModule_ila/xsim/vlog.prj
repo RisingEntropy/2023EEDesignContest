@@ -1,0 +1,6 @@
+verilog xil_defaultlib --include "../../../../SPI.gen/sources_1/ip/RegisterModule_ila/hdl/verilog" \
+"../../../../SPI.gen/sources_1/ip/RegisterModule_ila/sim/RegisterModule_ila.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
